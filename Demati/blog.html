@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="assets/scss/main.css">
+    <title>Demati Blog</title>
+</head>
+<body>
+    <div id="header-topbar">
+        <div class="container">
+            <div class="content-topbar">
+                <div class="content-topbar__text-with-icon">
+                    <div class="content-topbar__text-with-icon__text-icon-1">
+                        <a href="#">
+                            <i style="margin-right: 5px;" class="fa-solid fa-phone"></i>
+                            <span>+1-202-555-0184</span>
+                        </a>
+                    </div>
+                    <div class="content-topbar__text-with-icon__text-icon-2">
+                        <div class="d-flex align-items-center">
+                            <i style="margin-right: 2px;" class="fa-regular fa-envelope"></i>
+                            <span>sayhello@demati.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-topbar__custom-text">
+                    <span>Summer sale discount off 30%!</span>
+                    <a href="#" style="color: red; margin-left: 3px;" href="#">Shop Now</a>
+                </div>
+                <div class="content-topbar__currency">
+                    <div class="content-topbar__currency__have-flags">
+                        <div id="have-flag-selected" tabindex="0"
+                            class="content-topbar__currency__have-flags__selected">
+                            <img src="assets/images/HaveFlags/Europe.png" alt="europe.png">
+                            <span>EUR</span>
+                            <i id="flagsDropdownIcon" class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul id="flagDropdown" type="none" class="content-topbar__currency__have-flags--dropdown">
+                            <li>
+                                <img src="assets/images/HaveFlags/Europe.png" alt="">
+                                <span>EUR</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/Azerbaijan.png" alt="">
+                                <span>AZN</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/USD.svg" alt="">
+                                <span>USD</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/GBP.png" alt="">
+                                <span>GBP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-topbar__currency__have-language">
+                        <div id="have-language-selected" class="content-topbar__currency__have-language__selected">
+                            <span>English</span>
+                            <i id="languagesDropdownIcon" class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul id="languageDropdown" type="none" class="content-topbar__currency__have-language--dropdown">
+                            <li>
+                                <a href="#" lang="en">English</a>
+                            </li>
+                            <li>
+                                <a href="#" lang="tr">Turkey</a>
+                            </li>
+                            <li>
+                                <a href="#" lang="az">Azerbaijan</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div id="header-content">
+                <nav class="header-menu">
+                    <ul class="header-menu__list" type="none">
+                        <li class="header-menu__list__item active-menu">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="#">Shop</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="#">Blog</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="#">About Us</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="header-logo">
+                    <a href="#"><img id="logo" src="assets/icons/logo.avif" alt="logo"></a>
+                </div>
+                <div class="header-page-link">
+                    <div class="search-toggle">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="content-search-toggle"></div>
+                    <div class="header-account">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="wishlist__count">3</span>
+                    </div>
+                    <div class="header-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="header-cart__count">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

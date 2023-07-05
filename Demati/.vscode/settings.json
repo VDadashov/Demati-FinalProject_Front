@@ -1,0 +1,5 @@
+{
+    "liveServer.settings.port": 5500,
+    "scss.compileMap": false,
+    "scss.outputStyle": "compressed"
+}
