@@ -150,49 +150,49 @@
                                 <ul class="shop__filter__categories__ul" type="none">
                                     <li class="shop__filter__categories__item">
                                         <a class="shop__filter__categories__link" href="#">
-                                            <input type="checkbox" id="all-products">
+                                            <input class="categories-checkbox" type="checkbox" id="all-products" onclick="categoriestoggleCheck(this)">
                                             <label for="all-products">All-Products</label>
                                             <span class="shop__filter__categories__count">(12)</span>
                                         </a>
                                     </li>
                                     <li class="shop__filter__categories__item">
                                         <a class="shop__filter__categories__link" href="#">
-                                            <input type="checkbox" id="man">
+                                            <input class="categories-checkbox" type="checkbox" id="man" onclick="categoriestoggleCheck(this)">
                                             <label for="man">Man</label>
                                             <span class="shop__filter__categories__count">(12)</span>
                                         </a>
                                     </li>
                                     <li class="shop__filter__categories__item">
                                         <a class="shop__filter__categories__link" href="#">
-                                            <input type="checkbox" id="women">
+                                            <input class="categories-checkbox" type="checkbox" id="women" onclick="categoriestoggleCheck(this)">
                                             <label for="women">Women</label>
                                             <span class="shop__filter__categories__count">(4)</span>
                                         </a>
                                     </li>
                                     <li class="shop__filter__categories__item">
                                         <a class="shop__filter__categories__link" href="#">
-                                            <input type="checkbox" id="t-shirts">
+                                            <input class="categories-checkbox" type="checkbox" id="t-shirts" onclick="categoriestoggleCheck(this)">
                                             <label for="t-shirts">T-Shirts</label>
                                             <span class="shop__filter__categories__count">(8)</span>
                                         </a>
                                     </li>
                                     <li class="shop__filter__categories__item">
                                         <a class="shop__filter__categories__link" href="#">
-                                            <input type="checkbox" id="sweatshirts">
+                                            <input class="categories-checkbox" type="checkbox" id="sweatshirts" onclick="categoriestoggleCheck(this)">
                                             <label for="sweatshirts">Sweatshirts</label>
                                             <span class="shop__filter__categories__count">(5)</span>
                                         </a>
                                     </li>
                                     <li class="shop__filter__categories__item deactivate">
                                         <a class="shop__filter__categories__link" href="#">
-                                            <input type="checkbox" id="shoes">
+                                            <input class="categories-checkbox" type="checkbox" id="shoes" onclick="categoriestoggleCheck(this)">
                                             <label for="shoes">Shoes</label>
                                             <span class="shop__filter__categories__count">(8)</span>
                                         </a>
                                     </li>
                                     <li class="shop__filter__categories__item deactivate">
                                         <a class="shop__filter__categories__link" href="#">
-                                            <input type="checkbox" id="knitwear">
+                                            <input class="categories-checkbox" type="checkbox" id="knitwear" onclick="categoriestoggleCheck(this)">
                                             <label for="knitwear">Knitwear</label>
                                             <span class="shop__filter__categories__count">(5)</span>
                                         </a>
@@ -213,14 +213,14 @@
                                 <ul type="none" class="shop__filter__availability__ul">
                                     <li class="shop__filter__availability__item">
                                         <a class="shop__filter__availability__link" href="#">
-                                            <input type="checkbox" id="in-stock">
+                                            <input class="availability-checkbox" type="checkbox" id="in-stock" onclick="availabilitycategoriestoggleCheck(this)">
                                             <label for="in-stock">In stock</label>
                                             <span class="shop__filter__availability__count">(12)</span>
                                         </a>
                                     </li>
                                     <li class="shop__filter__availability__item">
                                         <a class="shop__filter__availability__link" href="#">
-                                            <input type="checkbox" id="out-of-stock">
+                                            <input class="availability-checkbox" type="checkbox" id="out-of-stock" onclick="availabilitycategoriestoggleCheck(this)">
                                             <label for="out-of-stock">Out of stock</label>
                                             <span class="shop__filter__availability__count">(1)</span>
                                         </a>
@@ -264,7 +264,7 @@
                                 <div class="shop__filter__color__title--close"><img src="assets/icons/down-arrow.png" alt=""></div>
                             </h4>
                             <div class="shop__filter__color__display">
-                                <div class="shop__filter__color__content active-color">
+                                <div class="shop__filter__color__content active-color" onclick="toggleActiveColor(this)">
                                     <div style="background-color: black;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -272,7 +272,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="shop__filter__color__content">
+                                <div class="shop__filter__color__content" onclick="toggleActiveColor(this)">
                                     <div style="background-color: blue;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -280,7 +280,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="shop__filter__color__content">
+                                <div class="shop__filter__color__content" onclick="toggleActiveColor(this)">
                                     <div style="background-color: brown;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -288,7 +288,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="shop__filter__color__content">
+                                <div class="shop__filter__color__content" onclick="toggleActiveColor(this)">
                                     <div style="background-color: yellow;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -296,7 +296,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="shop__filter__color__content">
+                                <div class="shop__filter__color__content" onclick="toggleActiveColor(this)">
                                     <div style="background-color: red;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -304,7 +304,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="shop__filter__color__content">
+                                <div class="shop__filter__color__content" onclick="toggleActiveColor(this)">
                                     <div style="background-color: white;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -312,7 +312,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="shop__filter__color__content">
+                                <div class="shop__filter__color__content" onclick="toggleActiveColor(this)">
                                     <div style="background-color: green;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -320,7 +320,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="shop__filter__color__content">
+                                <div class="shop__filter__color__content" onclick="toggleActiveColor(this)">
                                     <div style="background-color: violet;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -328,7 +328,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="shop__filter__color__content">
+                                <div class="shop__filter__color__content" onclick="toggleActiveColor(this)">
                                     <div style="background-color: grey;" class="shop__filter__color--box">
                                         <span class="shop__filter__color--box--hover-text">
                                             <span class="shop__filter__color--box__text"></span>
@@ -450,6 +450,11 @@
                                         <span class="product-card--old-price">€12.50</span>
                                         <span class="product-card--new-price">€11.00</span>
                                     </div>
+                                    <div class="product-card__size">
+                                        <div class="product-card__size__title">Size:</div>
+                                        <div class="product-card__size__item size-active">M</div>
+                                        <div class="product-card__size__item">L</div>
+                                    </div>
                                     <div class="product-card__color">
                                         <div class="product-card__color__content active-color">
                                             <div style="background-color: black;" class="product-card__color--box">
@@ -475,9 +480,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-card__size">
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -554,6 +556,11 @@
                                         <span class="product-card--old-price">€12.50</span>
                                         <span class="product-card--new-price">€11.00</span>
                                     </div>
+                                    <div class="product-card__size">
+                                        <div class="product-card__size__title">Size:</div>
+                                        <div class="product-card__size__item size-active">M</div>
+                                        <div class="product-card__size__item">L</div>
+                                    </div>
                                     <div class="product-card__color">
                                         <div class="product-card__color__content active-color">
                                             <div style="background-color: black;" class="product-card__color--box">
@@ -579,9 +586,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-card__size">
-    
                                     </div>
                                 </div>
                             </div>
@@ -656,6 +660,11 @@
                                         <span class="product-card--old-price">€12.50</span>
                                         <span class="product-card--new-price">€11.00</span>
                                     </div>
+                                    <div class="product-card__size">
+                                        <div class="product-card__size__title">Size:</div>
+                                        <div class="product-card__size__item size-active">M</div>
+                                        <div class="product-card__size__item">L</div>
+                                    </div>
                                     <div class="product-card__color">
                                         <div class="product-card__color__content active-color">
                                             <div style="background-color: black;" class="product-card__color--box">
@@ -681,9 +690,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-card__size">
-    
                                     </div>
                                 </div>
                             </div>
@@ -759,6 +765,11 @@
                                         <span class="product-card--old-price">€12.50</span>
                                         <span class="product-card--new-price">€11.00</span>
                                     </div>
+                                    <div class="product-card__size">
+                                        <div class="product-card__size__title">Size:</div>
+                                        <div class="product-card__size__item size-active">M</div>
+                                        <div class="product-card__size__item">L</div>
+                                    </div>
                                     <div class="product-card__color">
                                         <div class="product-card__color__content active-color">
                                             <div style="background-color: black;" class="product-card__color--box">
@@ -784,9 +795,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-card__size">
-    
                                     </div>
                                 </div>
                             </div>
@@ -862,6 +870,11 @@
                                         <span class="product-card--old-price">€12.50</span>
                                         <span class="product-card--new-price">€11.00</span>
                                     </div>
+                                    <div class="product-card__size">
+                                        <div class="product-card__size__title">Size:</div>
+                                        <div class="product-card__size__item size-active">M</div>
+                                        <div class="product-card__size__item">L</div>
+                                    </div>
                                     <div class="product-card__color">
                                         <div class="product-card__color__content active-color">
                                             <div style="background-color: black;" class="product-card__color--box">
@@ -887,9 +900,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-card__size">
-    
                                     </div>
                                 </div>
                             </div>
@@ -965,6 +975,11 @@
                                         <span class="product-card--old-price">€12.50</span>
                                         <span class="product-card--new-price">€11.00</span>
                                     </div>
+                                    <div class="product-card__size">
+                                        <div class="product-card__size__title">Size:</div>
+                                        <div class="product-card__size__item size-active">M</div>
+                                        <div class="product-card__size__item">L</div>
+                                    </div>
                                     <div class="product-card__color">
                                         <div class="product-card__color__content active-color">
                                             <div style="background-color: black;" class="product-card__color--box">
@@ -990,9 +1005,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-card__size">
-    
                                     </div>
                                 </div>
                             </div>
@@ -1067,6 +1079,11 @@
                                         <span class="product-card--old-price">€12.50</span>
                                         <span class="product-card--new-price">€11.00</span>
                                     </div>
+                                    <div class="product-card__size">
+                                        <div class="product-card__size__title">Size:</div>
+                                        <div class="product-card__size__item size-active">M</div>
+                                        <div class="product-card__size__item">L</div>
+                                    </div>
                                     <div class="product-card__color">
                                         <div class="product-card__color__content active-color">
                                             <div style="background-color: black;" class="product-card__color--box">
@@ -1092,9 +1109,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-card__size">
-    
                                     </div>
                                 </div>
                             </div>
@@ -1170,6 +1184,11 @@
                                         <span class="product-card--old-price">€12.50</span>
                                         <span class="product-card--new-price">€11.00</span>
                                     </div>
+                                    <div class="product-card__size">
+                                        <div class="product-card__size__title">Size:</div>
+                                        <div class="product-card__size__item size-active">M</div>
+                                        <div class="product-card__size__item">L</div>
+                                    </div>
                                     <div class="product-card__color">
                                         <div class="product-card__color__content active-color">
                                             <div style="background-color: black;" class="product-card__color--box">
@@ -1195,9 +1214,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-card__size">
-    
                                     </div>
                                 </div>
                             </div>
@@ -1405,7 +1421,10 @@
         </div>
     </footer>
 
-    <div id="loading-animation"></div>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/shop.js"></script>
