@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css" />
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <link rel="stylesheet" href="assets/scss/about-us/about-us.css">
+    <title>About Us</title>
+</head>
+
+<body>
+    <div id="header-topbar">
+        <div class="container">
+            <div class="content-topbar">
+                <div class="content-topbar__text-with-icon">
+                    <div class="content-topbar__text-with-icon__text-icon-1">
+                        <a href="#">
+                            <i style="margin-right: 5px;" class="fa-solid fa-phone"></i>
+                            <span>+1-202-555-0184</span>
+                        </a>
+                    </div>
+                    <div class="content-topbar__text-with-icon__text-icon-2">
+                        <div class="d-flex align-items-center">
+                            <i style="margin-right: 2px;" class="fa-regular fa-envelope"></i>
+                            <span>sayhello@demati.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-topbar__custom-text">
+                    <span>Summer sale discount off 30%!</span>
+                    <a href="#" style="color: red; margin-left: 3px;" href="#">Shop Now</a>
+                </div>
+                <div class="content-topbar__currency">
+                    <div class="content-topbar__currency__have-flags">
+                        <div id="have-flag-selected" tabindex="0"
+                            class="content-topbar__currency__have-flags__selected">
+                            <img src="assets/images/HaveFlags/Europe.png" alt="europe.png">
+                            <span>EUR</span>
+                            <i id="flagsDropdownIcon" class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul id="flagDropdown" type="none" class="content-topbar__currency__have-flags--dropdown">
+                            <li>
+                                <img src="assets/images/HaveFlags/Europe.png" alt="">
+                                <span>EUR</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/Azerbaijan.png" alt="">
+                                <span>AZN</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/USD.svg" alt="">
+                                <span>USD</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/GBP.png" alt="">
+                                <span>GBP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-topbar__currency__have-language">
+                        <div id="have-language-selected" class="content-topbar__currency__have-language__selected">
+                            <span>English</span>
+                            <i id="languagesDropdownIcon" class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul id="languageDropdown" type="none" class="content-topbar__currency__have-language--dropdown">
+                            <li>
+                                <a href="#" lang="en">English</a>
+                            </li>
+                            <li>
+                                <a href="#" lang="tr">Turkey</a>
+                            </li>
+                            <li>
+                                <a href="#" lang="az">Azerbaijan</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div id="header-content">
+                <nav class="header-menu">
+                    <ul class="header-menu__list" type="none">
+                        <li class="header-menu__list__item active-menu">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="./shop.html">Shop</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="./blog.html">Blog</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="./about-us.html">About Us</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="./contact-us.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="header-logo">
+                    <a href="#"><img id="logo" src="assets/icons/logo.avif" alt="logo"></a>
+                </div>
+                <div class="header-page-link">
+                    <div class="search-toggle">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="content-search-toggle"></div>
+                    <div class="header-account">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="wishlist__count">3</span>
+                    </div>
+                    <div class="header-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="header-cart__count">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-us-head">
+            <div class="container">
+                <img src="assets/images/AboutUs/about-us-head-image.jpg" alt="about-us-head-image.jpg">
+            </div>
+        </section>
+
+        <section id="about-outfie">
+            <div class="container">
+                <div class="about-outfie">
+                    <div class="about-outfie__text">
+                        <h2 class="about-outfie__text__title">About Outfie</h2>
+                        <div class="about-outfie__text__description">Slowly she drifted to the southeast, rising higher
+                            and higher as the flames ateaway her wooden parts and diminished the weight upon her.
+                            Ascending to the roof of the building I watched her for hours until she was lost in the dim
+                            finally.</div>
+                        <div class="about-outfie__text__content">
+                            <h6>Store Hours</h6>
+                            <p>Monday-Saturday : 11am–7pm ET</p>
+                            <p>Sunday : 11am–6pm ET</p>
+                        </div>
+                    </div>
+                    <div class="about-outfie__image">
+                        <img src="assets/images/AboutUs/img-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us-extension">
+            <div class="container">
+                <div class="about-us-extension">
+                    <div class="about-us-extension__content">
+                        <div class="about-us-extension__item">
+                            <h2 class="about-us-extension__item__title">Free shipping</h2>
+                            <div class="about-us-extension__item__description">We want you to be happy with your
+                                purchase. Therefore, shipping is on us and you can return your items up to 90 days.
+                            </div>
+                        </div>
+                        <div class="about-us-extension__item">
+                            <h2 class="about-us-extension__item__title">Express delivery</h2>
+                            <div class="about-us-extension__item__description">Don’t feel like waiting? Our express
+                                delivery service ensures you receive your new items within 5 business days.</div>
+                        </div>
+                        <div class="about-us-extension__item">
+                            <h2 class="about-us-extension__item__title">New styles</h2>
+                            <div class="about-us-extension__item__description">We’re constantly designing new styles and
+                                collections. Come back soon to discover what’s new and pick your favourite</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-teams">
+            <div class="container">
+                <h2>Our Teams</h2>
+                <div class="our-teams">
+                    <div class="our-teams__item">
+                        <div class="our-teams__item__image">
+                            <img src="assets/images/AboutUs/our-3.jpg" alt="our-3.jpg">
+                            <div class="our-teams__item--social-link">
+                                <a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="our-teams__item__info">
+                            <div class="our-teams__item__title">Kaya Luettgen</div>
+                            <div class="our-teams__item__job">Designer</div>
+                        </div>
+                    </div>
+                    <div class="our-teams__item our-teams__item--down">
+                        <div class="our-teams__item__image">
+                            <img src="assets/images/AboutUs/our-1.jpg" alt="our-1.jpg">
+                            <div class="our-teams__item--social-link">
+                                <a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="our-teams__item__info">
+                            <div class="our-teams__item__title">Robert Smith</div>
+                            <div class="our-teams__item__job">CEO</div>
+                        </div>
+                    </div>
+                    <div class="our-teams__item">
+                        <div class="our-teams__item__image">
+                            <img src="assets/images/AboutUs/our-2.jpg" alt="our-2.jpg">
+                            <div class="our-teams__item--social-link">
+                                <a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="our-teams__item__info">
+                            <div class="our-teams__item__title">Haleigh Walter</div>
+                            <div class="our-teams__item__job">Designer</div>
+                        </div>
+                    </div>
+                    <div class="our-teams__item our-teams__item--down">
+                        <div class="our-teams__item__image">
+                            <img src="assets/images/AboutUs/our-4.jpg" alt="our-4.jpg">
+                            <div class="our-teams__item--social-link">
+                                <a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="our-teams__item__info">
+                            <div class="our-teams__item__title">Jhon Doe</div>
+                            <div class="our-teams__item__job">Designer</div>
+                        </div>
+                    </div>
+                    <div class="our-teams__item">
+                        <div class="our-teams__item__image">
+                            <img src="assets/images/AboutUs/our-1.jpg" alt="our-1.jpg">
+                            <div class="our-teams__item--social-link">
+                                <a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="our-teams__item__info">
+                            <div class="our-teams__item__title">Robert Smith</div>
+                            <div class="our-teams__item__job">CEO</div>
+                        </div>
+                    </div>
+                    <div class="our-teams__item our-teams__item--down">
+                        <div class="our-teams__item__image">
+                            <img src="assets/images/AboutUs/our-2.jpg" alt="our-2.jpg">
+                            <div class="our-teams__item--social-link">
+                                <a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="our-teams__item__info">
+                            <div class="our-teams__item__title">Haleigh Walter</div>
+                            <div class="our-teams__item__job">Designer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+    </main>
+
+    <section style="position: static;" id="popular-brands">
+        <div class="brands-slider">
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-1.webp" alt="brand-1.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-2.webp" alt="brand-2.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-3.webp" alt="brand-3.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-4.webp" alt="brand-4.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-5.webp" alt="brand-5.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-6.webp" alt="brand-6.webp"></a>
+            </div>
+        </div>
+    </section>
+
+    <section style="position: static;" id="lookbook">
+        <div class="lookbook-subscribe">
+            <h2>Let's be friends</h2>
+            <span>Subscribe to receive updates, access to exclusive deals, and more.</span>
+            <form action="#">
+                <input type="text" placeholder="Your email">
+                <button>Subscribe</button>
+            </form>
+        </div>
+        <div class="lookbook-instagram">
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_1.webp" alt="Artboard_1.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_11.webp" alt="Artboard_11.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_2.webp" alt="Artboard_2.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_3.webp" alt="Artboard_3.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_6.webp" alt="Artboard_6.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_7.webp" alt="Artboard_7.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin: 0;">
+        <div class="container">
+            <div class="footer-content">
+                <div class="content-toggle contact-us-toggle">
+                    <h2 class="content-toggle__title">Contact Us</h2>
+                    <div class="content-toggle__block">
+                        <p><span>Add : </span>4 Copley Place, 7th Floor, Boston,MA 6</p>
+                        <p><span>Tell : </span>866.453.4748</p>
+                        <p><span>HR Fax : </span>810.222.5439</p>
+                        <p><span>Email : </span>sales@demati.com</p>
+                        <ul class="content-toggle__block--social-media" type="none">
+                            <li>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-toggle categories-toggle">
+                    <h2 class="content-toggle__title">Categories</h2>
+                    <div class="content-toggle__block">
+                        <ul type="none" class="footer-menu">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Tops</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Basics</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Shirts & Blouses</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Pants</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Blazers & Vests</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Shorts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-toggle services-toggle">
+                    <h2 class="content-toggle__title">Services</h2>
+                    <div class="content-toggle__block">
+                        <ul type="none" class="footer-menu">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Sale</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Quick Ship</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">New Designs</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Accidental Fabric Protection</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Furniture Care</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Gift Cards</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-toggle join-us-toggle">
+                    <h2 class="content-toggle__title">Join Us</h2>
+                    <p>New subscribers receive 10% off their first purchase</p>
+                    <form action="#">
+                        <input placeholder="Your email" type="email">
+                        <button type="submit">
+                            <i class="fa-sharp fa-regular fa-envelope"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom__part-1">
+                    Copyright © 2023. All Right Reserved
+                </div>
+                <div class="footer-bottom__part-2">
+                    <img src="assets/images/Payment/paymet-1.avif" alt="paymet-1">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/about-us.js"></script>
+</body>
+
+</html>

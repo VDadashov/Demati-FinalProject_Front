@@ -74,7 +74,7 @@ $(document).ready(function () {
   $('.featured-products-list').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2500,
     variableWidth: true,
     centerMode: false,
@@ -84,3 +84,4 @@ $(document).ready(function () {
   });
 });
 //#endregion
+
