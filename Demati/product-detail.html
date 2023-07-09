@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <link rel="stylesheet" href="assets/scss/product-detail/product-detail.css">
+    <title>Product Detail</title>
+</head>
+
+<body>
+    <div id="header-topbar">
+        <div class="container">
+            <div class="content-topbar">
+                <div class="content-topbar__text-with-icon">
+                    <div class="content-topbar__text-with-icon__text-icon-1">
+                        <a href="#">
+                            <i style="margin-right: 5px;" class="fa-solid fa-phone"></i>
+                            <span>+1-202-555-0184</span>
+                        </a>
+                    </div>
+                    <div class="content-topbar__text-with-icon__text-icon-2">
+                        <div class="d-flex align-items-center">
+                            <i style="margin-right: 2px;" class="fa-regular fa-envelope"></i>
+                            <span>sayhello@demati.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-topbar__custom-text">
+                    <span>Summer sale discount off 30%!</span>
+                    <a href="#" style="color: red; margin-left: 3px;" href="#">Shop Now</a>
+                </div>
+                <div class="content-topbar__currency">
+                    <div class="content-topbar__currency__have-flags">
+                        <div id="have-flag-selected" tabindex="0"
+                            class="content-topbar__currency__have-flags__selected">
+                            <img src="assets/images/HaveFlags/Europe.png" alt="europe.png">
+                            <span>EUR</span>
+                            <i id="flagsDropdownIcon" class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul id="flagDropdown" type="none" class="content-topbar__currency__have-flags--dropdown">
+                            <li>
+                                <img src="assets/images/HaveFlags/Europe.png" alt="">
+                                <span>EUR</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/Azerbaijan.png" alt="">
+                                <span>AZN</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/USD.svg" alt="">
+                                <span>USD</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/HaveFlags/GBP.png" alt="">
+                                <span>GBP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-topbar__currency__have-language">
+                        <div id="have-language-selected" class="content-topbar__currency__have-language__selected">
+                            <span>English</span>
+                            <i id="languagesDropdownIcon" class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul id="languageDropdown" type="none" class="content-topbar__currency__have-language--dropdown">
+                            <li>
+                                <a href="#" lang="en">English</a>
+                            </li>
+                            <li>
+                                <a href="#" lang="tr">Turkey</a>
+                            </li>
+                            <li>
+                                <a href="#" lang="az">Azerbaijan</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div id="header-content">
+                <nav class="header-menu">
+                    <ul class="header-menu__list" type="none">
+                        <li class="header-menu__list__item active-menu">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="./shop.html">Shop</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="./blog.html">Blog</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="./about-us.html">About Us</a>
+                        </li>
+                        <li class="header-menu__list__item">
+                            <a href="./contact-us.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="header-logo">
+                    <a href="#"><img id="logo" src="assets/icons/logo.avif" alt="logo"></a>
+                </div>
+                <div class="header-page-link">
+                    <div class="search-toggle">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="content-search-toggle"></div>
+                    <div class="header-account">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="wishlist__count">3</span>
+                    </div>
+                    <div class="header-cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="header-cart__count">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="./index.html">Home</a><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="./shop.html">Shop</a><i class="fa-solid fa-chevron-right"></i></li>
+                    <li>Gigi And Bella Hadid’s Stylist</li>
+                </ul>
+            </div>
+        </section>
+        <section id="product-detail-content">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item__image-thumbnails">
+                        <div class="product-item__images">
+                            <div class="product-item__image active">
+                                <img src="assets/images/Product/Detail/product-detail1.avif" alt="product-detail1.avif">
+                            </div>
+                            <div class="product-item__image">
+                                <img src="assets/images/Product/Detail/product-detail2.avif" alt="product-detail2.avif">
+                            </div>
+                            <div class="product-item__image">
+                                <img src="assets/images/Product/Detail/product-detail3.avif" alt="product-detail3.avif">
+                            </div>
+                            <div class="product-item__image">
+                                <img src="assets/images/Product/Detail/product-detail4.avif" alt="product-detail4.avif">
+                            </div>
+                            <div class="product-item__image">
+                                <img src="assets/images/Product/Detail/product-detail5.avif" alt="product-detail5.avif">
+                            </div>
+                        </div>
+                        <div class="product-item__main-image-content">
+                            <div class="product-item__main-image-item active">
+                                <img class="product-item__main-image"
+                                    src="assets/images/Product/Detail/product-m-image1.webp"
+                                    alt="product-m-image1.webp">
+                                <div class="product-item__main-image-content--addition">
+                                    <div class="product-item__main-image-content--new-in">New in</div>
+                                </div>
+                            </div>
+                            <div class="product-item__main-image-item">
+                                <img class="product-item__main-image"
+                                    src="assets/images/Product/Detail/product-m-image2.webp"
+                                    alt="product-m-image2.webp">
+                                <div class="product-item__main-image-content--addition">
+                                    <div class="product-item__main-image-content--new-in">New in</div>
+                                </div>
+                            </div>
+                            <div class="product-item__main-image-item">
+                                <img class="product-item__main-image"
+                                    src="assets/images/Product/Detail/product-m-image3.webp"
+                                    alt="product-m-image3.webp">
+                                <div class="product-item__main-image-content--addition">
+                                    <div class="product-item__main-image-content--new-in">New in</div>
+                                </div>
+                            </div>
+                            <div class="product-item__main-image-item">
+                                <img class="product-item__main-image"
+                                    src="assets/images/Product/Detail/product-m-image4.webp"
+                                    alt="product-m-image4.webp">
+                                <div class="product-item__main-image-content--addition">
+                                    <div class="product-item__main-image-content--new-in">New in</div>
+                                </div>
+                            </div>
+                            <div class="product-item__main-image-item">
+                                <img class="product-item__main-image"
+                                    src="assets/images/Product/Detail/product-m-image5.webp"
+                                    alt="product-m-image5.webp">
+                                <div class="product-item__main-image-content--addition">
+                                    <div class="product-item__main-image-content--new-in">New in</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item__info">
+                        <div class="product-item--review">
+                            <span class="product-item--review-star">
+                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="product-item--review-star">
+                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="product-item--review-star">
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                            <span class="product-item--review-star">
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                            <span class="product-item--review-star">
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                            <span class="product-item--review-count">
+                                (1)
+                            </span>
+                        </div>
+                        <div class="product-item__title">
+                            <h2>Art print T-shirt</h2>
+                        </div>
+                        <div class="product-item__price">
+                            <span class="product-item--old-price">€12.50</span>
+                            <span class="product-item--new-price">€11.00</span>
+                        </div>
+                        <div class="product-item__vendor">
+                            By <span>SE Store</span>
+                        </div>
+                        <div class="product-item__stock">
+                            <i class="fa-regular fa-circle-check fa-beat-fade"></i>
+                            <span style="color: #108043;">In stock</span>
+                        </div>
+                        <div class="product-item__size">
+                            <div class="product-item__size__title">
+                                Size : <span class="product-item__size__value"> M</span>
+                            </div>
+                            <div class="product-item__size__content">
+                                <div class="product-item__size__box active"><span>M</span></div>
+                                <div class="product-item__size__box"><span>L</span></div>
+                            </div>
+                            <div class="product-item__size-guide" id="sizeGuide">
+                                <i class="fa-solid fa-ruler-horizontal"></i>
+                                <h2>Size Guide</h2>
+                            </div>
+                        </div>
+                        <div class="product-item__color">
+                            <div class="product-item__color__title">color : <span
+                                    class="product-item__color__value">Black</span></div>
+                            <div class="product-item__color__content">
+                                <div class="product-item__color__box active-color">
+                                    <div style="background-color: black;" class="product-item__color--box">
+                                        <span class="product-item__color--box--hover-text">
+                                            <span class="product-item__color--box__text"></span>
+                                            <i class="fa-solid fa-caret-down"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item__color__box">
+                                    <div style="background-color: white;" class="product-item__color--box">
+                                        <span class="product-item__color--box--hover-text">
+                                            <span class="product-item__color--box__text"></span>
+                                            <i class="fa-solid fa-caret-down"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="product-item__color__box">
+                                    <div style="background-color: red;" class="product-item__color--box">
+                                        <span class="product-item__color--box--hover-text">
+                                            <span class="product-item__color--box__text"></span>
+                                            <i class="fa-solid fa-caret-down"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item__add-to-card">
+                            <div class="product-item__count">
+                                <button class="product-item__qty-minus"><i class="fa-solid fa-minus"></i></button>
+                                <input id="product-item--count" type="text" pattern="\d{10}" required value="1">
+                                <button class="product-item__qty-plus"><i class="fa-regular fa-plus"></i></button>
+                            </div>
+                            <button class="product-item__add-to-card__btn">
+                                Add To Card
+                            </button>
+                            <button class="product-item--wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-item__ask-share">
+                            <button class="product-item__ask-share--item compare">
+                                <i style="font-size: 14.5px;margin-right: 2px;"
+                                    class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                <span>Compare</span>
+                            </button>
+                            <button class="product-item__ask-share--item ask-question" id="askQuestionBtn">
+                                <i class="fa-solid fa-question"></i>
+                                <span>Ask a question</span>
+                            </button>
+                            <button class="product-item__ask-share--item delivery-return" id="deliveryBtn">
+                                <i class="fa-solid fa-truck"></i>
+                                <span>Delivery Return</span>
+                            </button>
+                            <button class="product-item__ask-share--item share" id="shareBtn">
+                                <i class="fa-solid fa-share"></i>
+                                <span>Share</span>
+                            </button>
+                        </div>
+                        <div class="product-item__estimated_delivery">
+                            <div class="product-item__estimated_delivery--icons">
+                                <img src="assets/icons/truck.png" alt="truck.png">
+                            </div>
+                            <div class="product-item__estimated_delivery__content">
+                                Order in the next <span class="time_hour">21</span> hours <span class="time_min">1</span> minutes to get it between <span class="day_start">Friday, Jul 14</span> and <span class="day_stop">Tuesday, Jul 18</span>
+                            </div>
+                        </div>
+                        <div class="product-item__trust-barget">
+                            <div class="product-item__trust-barget__title">Guarantee safe & secure checkout</div>
+                            <div class="product-item__trust-barget__content">
+                                <img src="assets/images/Payment/paymet-1.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section style="position: static;" id="popular-brands">
+        <div class="brands-slider">
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-1.webp" alt="brand-1.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-2.webp" alt="brand-2.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-3.webp" alt="brand-3.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-4.webp" alt="brand-4.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-5.webp" alt="brand-5.webp"></a>
+            </div>
+            <div class="brands-slider__item">
+                <a href="#"><img src="assets/images/Brands/brand-6.webp" alt="brand-6.webp"></a>
+            </div>
+        </div>
+    </section>
+
+    <section style="position: static;" id="lookbook">
+        <div class="lookbook-subscribe">
+            <h2>Let's be friends</h2>
+            <span>Subscribe to receive updates, access to exclusive deals, and more.</span>
+            <form action="#">
+                <input type="text" placeholder="Your email">
+                <button>Subscribe</button>
+            </form>
+        </div>
+        <div class="lookbook-instagram">
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_1.webp" alt="Artboard_1.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_11.webp" alt="Artboard_11.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_2.webp" alt="Artboard_2.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_3.webp" alt="Artboard_3.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_6.webp" alt="Artboard_6.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="lookbook-card">
+                <div class="lookbook-card__image">
+                    <a href="#"><img src="assets/images/Artboard/Artboard_7.webp" alt="Artboard_7.webp"></a>
+                </div>
+                <button class="lookbook-card--item">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin: 0;">
+        <div class="container">
+            <div class="footer-content">
+                <div class="content-toggle contact-us-toggle">
+                    <h2 class="content-toggle__title">Contact Us</h2>
+                    <div class="content-toggle__block">
+                        <p><span>Add : </span>4 Copley Place, 7th Floor, Boston,MA 6</p>
+                        <p><span>Tell : </span>866.453.4748</p>
+                        <p><span>HR Fax : </span>810.222.5439</p>
+                        <p><span>Email : </span>sales@demati.com</p>
+                        <ul class="content-toggle__block--social-media" type="none">
+                            <li>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-toggle categories-toggle">
+                    <h2 class="content-toggle__title">Categories</h2>
+                    <div class="content-toggle__block">
+                        <ul type="none" class="footer-menu">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Tops</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Basics</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Shirts & Blouses</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Pants</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Blazers & Vests</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Shorts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-toggle services-toggle">
+                    <h2 class="content-toggle__title">Services</h2>
+                    <div class="content-toggle__block">
+                        <ul type="none" class="footer-menu">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Sale</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Quick Ship</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">New Designs</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Accidental Fabric Protection</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Furniture Care</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu--link" href="#">Gift Cards</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-toggle join-us-toggle">
+                    <h2 class="content-toggle__title">Join Us</h2>
+                    <p>New subscribers receive 10% off their first purchase</p>
+                    <form action="#">
+                        <input placeholder="Your email" type="email">
+                        <button type="submit">
+                            <i class="fa-sharp fa-regular fa-envelope"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom__part-1">
+                    Copyright © 2023. All Right Reserved
+                </div>
+                <div class="footer-bottom__part-2">
+                    <img src="assets/images/Payment/paymet-1.avif" alt="paymet-1">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div id="size-modal" class="size-modal">
+        <div class="size-modal__content">
+            <span class="close">&times;</span>
+            <h2>Size Guide</h2>
+            <img src="assets/images/size-guide.jpg" alt="">
+            <img src="assets/images/size-guide2.webp" alt="">
+        </div>
+    </div>
+
+    <div id="askQuestionModal" class="askQuestionModal">
+        <div class="askQuestionModal__content">
+            <span class="askQuestionModal-close">&times;</span>
+            <h2 class="askQuestionModal__title">Ask a Question</h2>
+            <form action="#">
+                <div class="askQuestionModal__form">
+                    <div class="askQuestionModal__form-group">
+                        <input type="text" id="askQuestionModal-name" placeholder="Your name">
+                        <input type="email" id="askQuestionModal-email" placeholder="Your email">
+                    </div>
+                    <input type="tel" id="askQuestionModal-phone" class="askQuestionModal__phone" placeholder="Phone Number">
+                    <div class="askQuestionModal__textarea">
+                        <textarea name="askQuestionModal-textarea" id="askQuestionModal-textarea" cols="30" rows="10" placeholder="Your message..."></textarea>
+                    </div>
+                    <div class="askQuestionModal__form-btn">
+                        <button>Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="deliveryModal" class="deliveryModal">
+        <div class="deliveryModal__content">
+            <span class="deliveryModal-close">&times;</span>
+            <h2 class="deliveryModal__title">Shipping info</h2>
+            <p class="deliveryModal__text"><strong>Return Policy:</strong> We will gladly accept returns for any reason within 30 days of receipt of delivery.</p>
+            <p class="deliveryModal__text"><strong>Availability:</strong> Ships anywhere in the United States</p>
+            <p class="deliveryModal__text"><strong>Processing Time:</strong> Allow 3-4 business days processing time for your order to ship.</p>
+        </div>
+    </div>
+
+    <div id="shareModal" class="shareModal">
+        <div class="shareModal__content">
+            <span class="shareModal-close">&times;</span>
+            <span class="shareModal__text">Copy link</span>
+            <div class="shareModal__copyBtn">
+                <input type="text" id="shareModal-input">
+                <button id="shareModal-copy">copy</button>
+            </div>
+            <div class="shareModal__share">
+                <label>Share</label>
+                <div class="shareModal__social-sharing">
+                    <a href="facebook.com">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="twitter.com">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="pinterest.com">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="imageModal">
+        <div class="imageModal__content">
+          <span class="imageModal-close">&times;</span>
+          <img src="" class="modal-image" alt="Modal Image">
+        </div>
+      </div>
+
+    <script src="assets/js/product-detail.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -177,25 +177,28 @@ filterPriceDisplay();
 //#endregion
 
 //#region filter-color-hover-text
-const colorContentDivs = document.querySelectorAll('.shop__filter__color__content');
+function filterColorHoverText() {
+    const colorContentDivs = document.querySelectorAll('.shop__filter__color__content');
 
-colorContentDivs.forEach(colorContentDiv => {
-    const colorBoxDiv = colorContentDiv.querySelector('.shop__filter__color--box');
-    const hoverTextSpan = colorContentDiv.querySelector('.shop__filter__color--box__text');
-    const hoverTextContent = colorContentDiv.querySelector('.shop__filter__color--box--hover-text');
+    colorContentDivs.forEach(colorContentDiv => {
+        const colorBoxDiv = colorContentDiv.querySelector('.shop__filter__color--box');
+        const hoverTextSpan = colorContentDiv.querySelector('.shop__filter__color--box__text');
+        const hoverTextContent = colorContentDiv.querySelector('.shop__filter__color--box--hover-text');
 
-    colorContentDiv.addEventListener('mouseover', () => {
-        hoverTextSpan.textContent = colorBoxDiv.style.backgroundColor;
-        hoverTextContent.style.display = "flex";
-        hoverTextSpan.style.position = 'absolute';
+        colorContentDiv.addEventListener('mouseover', () => {
+            hoverTextSpan.textContent = colorBoxDiv.style.backgroundColor;
+            hoverTextContent.style.display = "flex";
+            hoverTextSpan.style.position = 'absolute';
+        });
+
+        colorContentDiv.addEventListener('mouseout', () => {
+            hoverTextSpan.textContent = '';
+            hoverTextContent.style.display = "none";
+            hoverTextSpan.style.position = '';
+        });
     });
-
-    colorContentDiv.addEventListener('mouseout', () => {
-        hoverTextSpan.textContent = '';
-        hoverTextContent.style.display = "none";
-        hoverTextSpan.style.position = '';
-    });
-});
+}
+filterColorHoverText();
 //#endregion
 
 //#region filter-color-display-close
@@ -321,12 +324,12 @@ paginationMove();
 function toggleActiveColor(clickedElement) {
     const colorContents = document.querySelectorAll('.shop__filter__color__content');
     colorContents.forEach((element) => {
-      if (element === clickedElement) {
-        element.classList.add('active-color');
-      } else {
-        element.classList.remove('active-color');
-      }
+        if (element === clickedElement) {
+            element.classList.add('active-color');
+        } else {
+            element.classList.remove('active-color');
+        }
     });
-  }
+}
 
 

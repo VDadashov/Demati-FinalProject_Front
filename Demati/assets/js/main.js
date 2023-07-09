@@ -1,40 +1,43 @@
 //#region flagDropdown-active and languageDropdown-active
-const haveFlagSelected = document.querySelector("#have-flag-selected");
-const haveLanguageSelected = document.querySelector("#have-language-selected");
+function flagDropdownAndLanguageDropdownActive() {
+  const haveFlagSelected = document.querySelector("#have-flag-selected");
+  const haveLanguageSelected = document.querySelector("#have-language-selected");
 
-haveFlagSelected.addEventListener("click", flagsDropdown)
-haveLanguageSelected.addEventListener("click", languagesDropdown);
+  haveFlagSelected.addEventListener("click", flagsDropdown)
+  haveLanguageSelected.addEventListener("click", languagesDropdown);
 
-function flagsDropdown() {
-  let flagDropdown = document.querySelector("#flagDropdown");
-  const flagsDropdownIcon = document.querySelector("#flagsDropdownIcon");
-  let languageDropdown = document.querySelector("#languageDropdown");
-  const languageDropdownIcon = document.querySelector("#languagesDropdownIcon");
+  function flagsDropdown() {
+    let flagDropdown = document.querySelector("#flagDropdown");
+    const flagsDropdownIcon = document.querySelector("#flagsDropdownIcon");
+    let languageDropdown = document.querySelector("#languageDropdown");
+    const languageDropdownIcon = document.querySelector("#languagesDropdownIcon");
 
-  if (flagDropdown.classList.contains("active-flag")) {
-    flagDropdown.classList.remove("active-flag");
-    flagsDropdownIcon.classList.remove("active-flag-icon");
-  } else {
-    languageDropdown.classList.remove("active-language");
-    languageDropdownIcon.classList.remove("active-language-icon");
-    flagDropdown.classList.add("active-flag");
-    flagsDropdownIcon.classList.add("active-flag-icon");
+    if (flagDropdown.classList.contains("active-flag")) {
+      flagDropdown.classList.remove("active-flag");
+      flagsDropdownIcon.classList.remove("active-flag-icon");
+    } else {
+      languageDropdown.classList.remove("active-language");
+      languageDropdownIcon.classList.remove("active-language-icon");
+      flagDropdown.classList.add("active-flag");
+      flagsDropdownIcon.classList.add("active-flag-icon");
+    }
+  }
+  function languagesDropdown() {
+    let languageDropdown = document.querySelector("#languageDropdown");
+    const languageDropdownIcon = document.querySelector("#languagesDropdownIcon");
+
+    if (languageDropdown.classList.contains("active-language")) {
+      languageDropdown.classList.remove("active-language");
+      languageDropdownIcon.classList.remove("active-language-icon");
+    } else {
+      flagDropdown.classList.remove("active-flag");
+      flagsDropdownIcon.classList.remove("active-flag-icon");
+      languageDropdown.classList.add("active-language");
+      languageDropdownIcon.classList.add('active-language-icon');
+    }
   }
 }
-function languagesDropdown() {
-  let languageDropdown = document.querySelector("#languageDropdown");
-  const languageDropdownIcon = document.querySelector("#languagesDropdownIcon");
-
-  if (languageDropdown.classList.contains("active-language")) {
-    languageDropdown.classList.remove("active-language");
-    languageDropdownIcon.classList.remove("active-language-icon");
-  } else {
-    flagDropdown.classList.remove("active-flag");
-    flagsDropdownIcon.classList.remove("active-flag-icon");
-    languageDropdown.classList.add("active-language");
-    languageDropdownIcon.classList.add('active-language-icon');
-  }
-}
+flagDropdownAndLanguageDropdownActive();
 //#endregion
 
 //#region category-animation
@@ -128,7 +131,7 @@ weeklySelectionTablist();
 //#endregion
 
 //#region load
-function load(){
+function load() {
   window.addEventListener("load", function () {
     var loadingScreen = document.getElementById("loading-screen");
     loadingScreen.style.display = "none";

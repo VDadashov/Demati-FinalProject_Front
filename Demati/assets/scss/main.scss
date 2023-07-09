@@ -348,6 +348,16 @@
     }
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 $custom-font-family: 'Outfit',
 sans-serif;
 $custom-blue-color:#41cde2;
@@ -547,7 +557,7 @@ $custom-text-color:rgb(134, 134, 134);
 header {
     background-color: white;
     border-bottom: 1px solid rgba(163, 156, 156, 0.5);
-    z-index: 999;
+    z-index: 990;
     top: 0;
 
     .container {
@@ -1484,7 +1494,7 @@ footer {
         .footer-content {
             display: flex;
             justify-content: space-between;
-            padding: 70px 0 60px 0;
+            padding: 70px 0 57px 0;
 
             .content-toggle {
                 width: 360px;
@@ -1615,14 +1625,19 @@ footer {
     height: 100%;
     background-color: #f1f1f1;
     z-index: 9999;
-}
 
-.loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1.5s linear infinite;
+    p{
+        font-family: $custom-font-family;
+        margin-left: 12px;
+    }
+
+    .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1.5s linear infinite;
+    }
 }
   
