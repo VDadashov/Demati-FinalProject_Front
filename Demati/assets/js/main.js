@@ -68,8 +68,8 @@ categoryHoverAnimation();
 //#region header-scroll
 function headerScroll() {
   window.addEventListener("scroll", function () {
-    var header = document.querySelector("header");
-    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    let header = document.querySelector("header");
+    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
     if (scrollPosition > 300) {
       header.style.position = "fixed";
       header.style.width = "100%";
@@ -102,7 +102,7 @@ function productCardColorActive() {
   }
 
   for (let i = 0; i < productCards.length; i++) {
-    var colorContents = productCards[i].querySelectorAll(".product-card__color__content");
+    let colorContents = productCards[i].querySelectorAll(".product-card__color__content");
 
     for (let j = 0; j < colorContents.length; j++) {
       colorContents[j].addEventListener("click", setActiveColor);
@@ -138,7 +138,7 @@ weeklySelectionTablist();
 //#region load
 function load() {
   window.addEventListener("load", function () {
-    var loadingScreen = document.getElementById("loading-screen");
+    let loadingScreen = document.getElementById("loading-screen");
     loadingScreen.style.display = "none";
   });
 }
@@ -192,27 +192,27 @@ function productSizeActive() {
 productSizeActive();
 //#endregion
 
-//#region loginModal
-function loginModal() {
+//#region basketModal
+function basketModal() {
   const loginButton = document.querySelector('#header-accountBtn');
-  const loginModal = document.querySelector('#loginModal');
+  const basketModal = document.querySelector('#basketModal');
   const closeButton = document.querySelector('#loginClose');
 
   loginButton.addEventListener('click', () => {
-    loginModal.style.display = 'block';
+    basketModal.style.display = 'block';
   });
 
   closeButton.addEventListener('click', () => {
-    loginModal.style.display = 'none';
+    basketModal.style.display = 'none';
   });
 
   window.addEventListener('click', (event) => {
-    if (event.target === loginModal) {
-      loginModal.style.display = 'none';
+    if (event.target === basketModal) {
+      basketModal.style.display = 'none';
     }
   });
 }
-loginModal();
+basketModal();
 //#endregion
 
 //#region resetPasswordModal
@@ -242,7 +242,7 @@ resetPasswordModal();
 //#endregion
 
 //#region loginpasswordEye
-function loginpasswordEye(){
+function loginpasswordEye() {
   const passwordEye = document.querySelector('#passwordEye');
   const passwordInput = document.querySelector('#login-password');
 
@@ -281,36 +281,26 @@ function openModal() {
 productModal();
 //#endregion
 
-//#region productModal-imageThumbnail
-$('.productModal__imageThumbnail').slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear'
-});
-//#endregion
-
 //#region productModalColorHoverSize
 function modalColorHoverSize() {
   const colorContentDivs = document.querySelectorAll('.productModal__color__box');
 
   colorContentDivs.forEach(colorContentDiv => {
-      const colorBoxDiv = colorContentDiv.querySelector('.productModal__color--box');
-      const hoverTextSpan = colorContentDiv.querySelector('.productModal__color--box__text');
-      const hoverTextContent = colorContentDiv.querySelector('.productModal__color--box--hover-text');
+    const colorBoxDiv = colorContentDiv.querySelector('.productModal__color--box');
+    const hoverTextSpan = colorContentDiv.querySelector('.productModal__color--box__text');
+    const hoverTextContent = colorContentDiv.querySelector('.productModal__color--box--hover-text');
 
-      colorContentDiv.addEventListener('mouseover', () => {
-          hoverTextSpan.textContent = colorBoxDiv.style.backgroundColor;
-          hoverTextContent.style.display = "flex";
-          hoverTextSpan.style.position = 'absolute';
-      });
+    colorContentDiv.addEventListener('mouseover', () => {
+      hoverTextSpan.textContent = colorBoxDiv.style.backgroundColor;
+      hoverTextContent.style.display = "flex";
+      hoverTextSpan.style.position = 'absolute';
+    });
 
-      colorContentDiv.addEventListener('mouseout', () => {
-          hoverTextSpan.textContent = '';
-          hoverTextContent.style.display = "none";
-          hoverTextSpan.style.position = '';
-      });
+    colorContentDiv.addEventListener('mouseout', () => {
+      hoverTextSpan.textContent = '';
+      hoverTextContent.style.display = "none";
+      hoverTextSpan.style.position = '';
+    });
   });
 }
 modalColorHoverSize();
@@ -322,14 +312,14 @@ function modalColorActive() {
   let colorValue = document.querySelector('.productModal__color__value');
 
   colors.forEach(color => {
-      color.addEventListener('click', function () {
-          colors.forEach(item => {
-              item.classList.remove('active-color');
-          })
-          colorName = color.querySelector('.productModal__color--box').style.backgroundColor;
-          colorValue.textContent = colorName;
-          color.classList.add('active-color');
+    color.addEventListener('click', function () {
+      colors.forEach(item => {
+        item.classList.remove('active-color');
       })
+      colorName = color.querySelector('.productModal__color--box').style.backgroundColor;
+      colorValue.textContent = colorName;
+      color.classList.add('active-color');
+    })
   })
 }
 modalColorActive();
@@ -341,27 +331,50 @@ function modalSizeActive() {
   let sizeValue = document.querySelector('.productModal__size__value');
 
   boxSize.forEach(item => {
-      item.addEventListener('click', function () {
-          boxSize.forEach(item => {
-              item.classList.remove('active-size');
-          })
-          let span = item.querySelector('span');
-          sizeValue.textContent = span.textContent;
-          item.classList.add('active-size');
-      })
+    item.addEventListener('click', function () {
       boxSize.forEach(item => {
-          if(item.classList.contains('active-size')){
-            let span = item.querySelector('span');
-            sizeValue.textContent = span.textContent;
-          }
+        item.classList.remove('active-size');
       })
+      let span = item.querySelector('span');
+      sizeValue.textContent = span.textContent;
+      item.classList.add('active-size');
+    })
+    boxSize.forEach(item => {
+      if (item.classList.contains('active-size')) {
+        let span = item.querySelector('span');
+        sizeValue.textContent = span.textContent;
+      }
+    })
   });
 }
 modalSizeActive();
 //#endregion
 
+//#region loginModal
+function loginModal() {
+  const loginButton = document.querySelector('#header-accountBtn');
+  const loginModal = document.querySelector('#loginModal');
+  const closeButton = document.querySelector('#loginClose');
+
+  loginButton.addEventListener('click', () => {
+    loginModal.style.display = 'block';
+  });
+
+  closeButton.addEventListener('click', () => {
+    loginModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === loginModal) {
+      loginModal.style.display = 'none';
+    }
+  });
+}
+loginModal();
+//#endregion
+
 //#region search-toggle
-function searchToggle(){
+function searchToggle() {
   const searchBtn = document.querySelector('.search-toggle');
   const searchModal = document.querySelector('#search-modal');
   const closeBtn = document.querySelector('#searchClose');
@@ -384,12 +397,12 @@ searchToggle();
 //#endregion
 
 //#region searchModal=>input
-function searchModalInput(){
+function searchModalInput() {
   const searchModalContent = document.querySelector('.search-modal-content');
   let searchModalInput = document.querySelector('#searchModalInput');
   let searchInputContent = document.querySelector('.search-modal__input');
 
-  searchModalInput.addEventListener('click',()=>{
+  searchModalInput.addEventListener('click', () => {
     searchInputContent.style.borderBottom = '1px solid #000';
   })
 
@@ -401,5 +414,166 @@ function searchModalInput(){
   });
 }
 searchModalInput();
+//#endregion
+
+//#region basketModal
+function basketModal() {
+  const loginButton = document.querySelector('#header-cart');
+  const basketModal = document.querySelector('#basketModal');
+  const closeButton = document.querySelector('#basketClose');
+
+  loginButton.addEventListener('click', () => {
+    basketModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeButton.addEventListener('click', () => {
+    basketModal.style.display = 'none';
+
+    document.body.style.overflow = 'scroll';
+  });
+}
+basketModal();
+//#endregion
+
+//#region checkBoxChanged
+function checkboxChanged() {
+  let checkbox = document.querySelector('#terms-and-conditions');
+  const checkOutBtn = document.querySelector('.basketModal--checkOut-btn');
+
+  if (checkbox.checked) {
+    checkOutBtn.classList.add('basketModal-activeBtn');
+    checkOutBtn.href = "./checkout.html";
+  } else {
+    checkOutBtn.classList.remove('basketModal-activeBtn');
+    checkOutBtn.href = '';
+  }
+}
+checkboxChanged();
+//#endregion
+
+//#region termsAndConditionsModal
+function termsAndConditionsModal() {
+  const termsBtn = document.querySelector('#terms-and-conditions-btn');
+  const termsModal = document.querySelector('#termsModal');
+  const closeButton = document.querySelector('#termsClose');
+
+  termsBtn.addEventListener('click', () => {
+    termsModal.style.display = 'block';
+  });
+
+  closeButton.addEventListener('click', () => {
+    termsModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === termsModal) {
+      termsModal.style.display = 'none';
+    }
+  });
+}
+termsAndConditionsModal();
+//#endregion
+
+//#region addNote
+function addNote() {
+  const addNoteBtn = document.querySelector('.add-note');
+  const addNoteContent = document.querySelector('.add-note__content');
+  const addNoteClose = document.querySelector('#add-note-closeBtn');
+
+  addNoteBtn.addEventListener('click', function () {
+    addNoteContent.classList.add('add-note-active');
+  })
+
+  addNoteClose.addEventListener('click', function () {
+    addNoteContent.classList.remove('add-note-active');
+  })
+
+
+}
+addNote();
+//#endregion
+
+//#region coupon
+function coupon() {
+  const couponBtn = document.querySelector('.coupon');
+  const couponContent = document.querySelector('.coupon__content');
+  const couponClose = document.querySelector('#coupon-closeBtn');
+
+  couponBtn.addEventListener('click', function () {
+    couponContent.classList.add('coupon-active');
+  })
+
+  couponClose.addEventListener('click', function () {
+    couponContent.classList.remove('coupon-active');
+  })
+
+
+}
+coupon();
+//#endregion
+
+//#region shipping
+function shipping() {
+  const shippingBtn = document.querySelector('.shipping');
+  const shippingContent = document.querySelector('.shipping__content');
+  const shippingClose = document.querySelector('#shipping-closeBtn');
+
+  shippingBtn.addEventListener('click', function () {
+    shippingContent.classList.add('shipping-active');
+  })
+
+  shippingClose.addEventListener('click', function () {
+    shippingContent.classList.remove('shipping-active');
+  })
+}
+shipping();
+//#endregion
+
+//#region productModalcountQty
+function productModalcountQty() {
+  document.querySelector('.productModal__qty-minus').addEventListener('click', function () {
+    let inputElement = document.getElementById('productModal--count');
+    let value = parseInt(inputElement.value);
+
+    if (value > 1) {
+      inputElement.value = value - 1;
+    }
+  });
+
+  document.querySelector('.productModal__qty-plus').addEventListener('click', function () {
+    let inputElement = document.getElementById('productModal--count');
+    let value = parseInt(inputElement.value);
+
+    inputElement.value = value + 1;
+  });
+}
+productModalcountQty();
+//#endregion
+
+//#region basketModalcountQty
+function basketModalcountQty() {
+  let minusBtns = document.querySelectorAll('.basketModal__item__qty-minus');
+  let plusBtns = document.querySelectorAll('.basketModal__item__qty-plus');
+  let inputFields = document.querySelectorAll('.basketModal__item--count');
+
+  minusBtns.forEach(function (btn, index) {
+    btn.addEventListener('click', function () {
+      let currentValue = parseInt(inputFields[index].value);
+      if (currentValue > 1) {
+        inputFields[index].value = currentValue - 1;
+      }
+    });
+  });
+
+  plusBtns.forEach(function (btn, index) {
+    btn.addEventListener('click', function () {
+      let currentValue = parseInt(inputFields[index].value);
+      inputFields[index].value = currentValue + 1;
+    });
+  });
+
+}
+  basketModalcountQty();
 //#endregion
 

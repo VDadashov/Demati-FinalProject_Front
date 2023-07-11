@@ -85,3 +85,12 @@ $(document).ready(function () {
 });
 //#endregion
 
+//#region productModal-imageThumbnail
+$('.productModal__imageThumbnail').slick({
+  dots: true,
+  infinite: true,
+  speed: 400,
+  fade: true,
+  cssEase: 'linear'
+});
+//#endregion
