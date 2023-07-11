@@ -113,7 +113,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="content-search-toggle"></div>
-                    <div class="header-account">
+                    <div id="header-accountBtn" class="header-account">
                         <i class="fa-regular fa-user"></i>
                     </div>
                     <div class="wishlist">
@@ -240,10 +240,10 @@
                         </div>
                         <div class="product-item__size">
                             <div class="product-item__size__title">
-                                Size : <span class="product-item__size__value"> M</span>
+                                Size : <span class="product-item__size__value"></span>
                             </div>
                             <div class="product-item__size__content">
-                                <div class="product-item__size__box active"><span>M</span></div>
+                                <div class="product-item__size__box active-size"><span>M</span></div>
                                 <div class="product-item__size__box"><span>L</span></div>
                             </div>
                             <div class="product-item__size-guide" id="sizeGuide">
@@ -318,13 +318,246 @@
                                 <img src="assets/icons/truck.png" alt="truck.png">
                             </div>
                             <div class="product-item__estimated_delivery__content">
-                                Order in the next <span class="time_hour">21</span> hours <span class="time_min">1</span> minutes to get it between <span class="day_start">Friday, Jul 14</span> and <span class="day_stop">Tuesday, Jul 18</span>
+                                Order in the next <span class="time_hour">21</span> hours <span
+                                    class="time_min">1</span> minutes to get it between <span class="day_start">Friday,
+                                    Jul 14</span> and <span class="day_stop">Tuesday, Jul 18</span>
                             </div>
                         </div>
                         <div class="product-item__trust-barget">
                             <div class="product-item__trust-barget__title">Guarantee safe & secure checkout</div>
                             <div class="product-item__trust-barget__content">
                                 <img src="assets/images/Payment/paymet-1.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item-down">
+                    <div class="product-tab-list">
+                        <ul class="product-tab-list__ul" type="none" role="tablist" aria-orientation="horizontal">
+                            <li class="product-tab-list__li active-selected"><span>Description</span></li>
+                            <li class="product-tab-list__li"><span>Review</span></li>
+                            <li class="product-tab-list__li"><span>Shipping</span></li>
+                            <li class="product-tab-list__li"><span>Return</span></li>
+                        </ul>
+                        <div class="product-tab-list__content active-content">
+                            <div class="product-tab-list__content__item description">
+                                <p>Get a fresh 'fit for spring with the Free People Love Letter Ivory Floral Jacquard
+                                    Cropped Cami Top! Stretchy jacquard fabric, with a textured floral design
+                                    throughout, shapes this cami top that has wide straps, a high square neckline, and a
+                                    fitted bodice that ends at a cropped hem with lettuce-edge trim.</p>
+                                <div class="description__row">
+                                    <div class="description__col">
+                                        <h6 class="bwp-title">Description</h6>
+                                        Model size: S<br> Model height: 177 cm <br>Colour: Red
+                                        <h6 class="bwp-title mt-3">Description</h6>
+                                        Model size: S<br> Model height: 177 cm <br>Colour: Red
+                                        <h6 class="bwp-title mt-3">Care</h6>
+                                        <img src="assets/images/Product/Detail/Des_test.avif" alt="Des_test.avif">
+                                    </div>
+                                    <div class="description__col active-col">
+                                        <h6 class="bwp-title">Base fabric</h6>
+                                        100% polyester
+                                        <h6 class="bwp-title mt-3">Lining</h6>
+                                        100% polyester
+                                        <h6 class="bwp-title mt-3">Inner</h6>
+                                        100% polyester
+                                    </div>
+                                    <div class="description__col">
+                                        <img src="assets/images/Product/Detail/descriptionImage1.webp"
+                                            alt="descriptionImage1.webp">
+                                    </div>
+                                    <div class="description__col">
+                                        <img src="assets/images/Product/Detail/descriptionImage2.webp"
+                                            alt="descriptionImage2.webp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-tab-list__content">
+                            <div class="product-tab-list__content__item review">
+                                <h2 class="review__title">Customer Reviews</h2>
+                                <div class="review__write">
+                                    <div class="review__point">
+                                        <span class="review--star">
+                                            <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <span class="review--star">
+                                            <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <span class="review--star">
+                                            <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <span class="review--star">
+                                            <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                        </span>
+                                        <span class="review--star">
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                        <div class="review__point--text">
+                                            Based on <span class="review__point--count">3</span> reviews
+                                        </div>
+                                    </div>
+                                    <div class="review--btn">
+                                        <button id="reviewBtn"><span>Write A Review</span></button>
+                                    </div>
+                                </div>
+                                <div class="review__write-content">
+                                    <h3>Write a review</h3>
+                                    <div class="review__write-content__form-group">
+                                        <div class="review__write-content__form-group__item">
+                                            <label for="review-name">Name</label>
+                                            <input type="text" id="review-name" placeholder="Enter your name">
+                                        </div>
+                                        <div class="review__write-content__form-group__item">
+                                            <label for="review-email">Email</label>
+                                            <input type="email" id="review-email" placeholder="john.smith@example.com">
+                                        </div>
+                                    </div>
+                                    <div class="review__write-content__choose-raiting">
+                                        <span class="review__write-content__choose-raiting__title">
+                                            Rating
+                                        </span>
+                                        <span class="review__write-content__choose-raiting--star">
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                        <span class="review__write-content__choose-raiting--star">
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                        <span class="review__write-content__choose-raiting--star">
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                        <span class="review__write-content__choose-raiting--star">
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                        <span class="review__write-content__choose-raiting--star">
+                                            <i class="fa-regular fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <div class="review__write-content__title">
+                                        <label for="review-title">Review Title</label>
+                                        <input type="text" id="review-title" placeholder="Give your review a title">
+                                    </div>
+                                    <div class="review__write-content__description">
+                                        <label for="review-description" id="charCount">Body of Review (1500)</label>
+                                        <textarea maxlength="1500" name="review-description" id="review-description"
+                                            cols="30" rows="10" placeholder="Write your comments here"></textarea>
+                                    </div>
+                                    <div class="review__write-content--btn">
+                                        <button>Sumbit review</button>
+                                    </div>
+                                </div>
+                                <div class="review__comment">
+                                    <div class="review__comment--raiting">
+                                        <div class="review__comment--raiting__content">
+                                            <span class="review__comment--raiting--star">
+                                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <div class="review__comment--raiting__writer">
+                                                ronaldo on Oct 27, 2022
+                                            </div>
+                                        </div>
+                                        <div class="review__comment--raiting__title">Good</div>
+                                        <div class="review__comment--raiting__description">happy</div>
+                                    </div>
+                                    <div class="review__comment--report">
+                                        Report as Inappropriate
+                                    </div>
+                                </div>
+                                <div class="review__comment">
+                                    <div class="review__comment--raiting">
+                                        <div class="review__comment--raiting__content">
+                                            <span class="review__comment--raiting--star">
+                                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <div class="review__comment--raiting__writer">
+                                                alexsandro on Oct 27, 2022
+                                            </div>
+                                        </div>
+                                        <div class="review__comment--raiting__title">Good</div>
+                                        <div class="review__comment--raiting__description">...</div>
+                                    </div>
+                                    <div class="review__comment--report">
+                                        Report as Inappropriate
+                                    </div>
+                                </div>
+                                <div class="review__comment">
+                                    <div class="review__comment--raiting">
+                                        <div class="review__comment--raiting__content">
+                                            <span class="review__comment--raiting--star">
+                                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i style="color: rgb(255, 164, 34);" class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="review__comment--raiting--star">
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <div class="review__comment--raiting__writer">
+                                                Owen Moore on Oct 21, 2022
+                                            </div>
+                                        </div>
+                                        <div class="review__comment--raiting__title">Lovely tee shirts</div>
+                                        <div class="review__comment--raiting__description">This is my second order. Love
+                                            the quality, fabric and fit of both the long sleeves and short V necks.
+                                        </div>
+                                    </div>
+                                    <div class="review__comment--report">
+                                        Report as Inappropriate
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-tab-list__content">
+                            <div class="product-tab-list__content__item shipping">
+                                <p>For orders placed before 7am AEDT, we endeavour to process the same business day.
+                                    Orders placed after 11am AEDT will be processed the next business day.</p>
+                                <p>During sale events and new collection launches, there may be a slighly longer
+                                    processing time.</p>
+                                <p>All Auguste orders are hand-picked and packed with love from Byron Bay, Australie.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product-tab-list__content">
+                            <div class="product-tab-list__content__item return">
+                                <p>You can choose between a refund or a credit note on full priced items.</p>
+                                <ul>
+                                    <li>Item(s) must be returned in their original condition and packaging: unworn,
+                                        unwashed and with all tags attached.</li>
+                                    <li>Earrings cannot be returned due to health and safety reasons.</li>
+                                    <li>Return shipping methods and associated costs are the responsibility of the
+                                        customer.</li>
+                                    <li>Sale items can not be refunded for change of mind.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -518,6 +751,40 @@
         </div>
     </footer>
 
+    <div id="loginModal" class="loginModal">
+        <div class="loginModal-content">
+            <span id="loginClose">&times;</span>
+            <h3>Sign in</h3>
+            <div class="login-content">
+                <form action="#">
+                    <div class="login-info">
+                        <input type="email" placeholder="Email*" required="required">
+                        <div class="password__content">
+                            <input type="password" placeholder="Password*" id="login-password" required="required">
+                            <span id="passwordEye"><i class="fa-regular fa-eye"></i></span>
+                        </div>
+                        <a href="#" id="resetBtn">Lost your password ?</a>
+                        <button id="modal-signIn">Sign in</button>
+                        <a href="./register.html" id="register-account"><span>Create Your Account</span></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="resetPassword" class="resetPassword">
+        <div class="resetPassword-content">
+            <h3>Sign in</h3>
+            <div class="resetPassword-content__info">
+                <h2>Reset your password</h2>
+                <p>We will send you an email to reset your password.</p>
+                <input type="email" placeholder="Email*">
+                <button>Submit</button>
+                <a href="#" id="resetClose">Cancel</a>
+            </div>
+        </div>
+    </div>
+
     <div id="loading-screen">
         <div class="loader"></div>
         <p>Loading...</p>
@@ -542,9 +809,11 @@
                         <input type="text" id="askQuestionModal-name" placeholder="Your name">
                         <input type="email" id="askQuestionModal-email" placeholder="Your email">
                     </div>
-                    <input type="tel" id="askQuestionModal-phone" class="askQuestionModal__phone" placeholder="Phone Number">
+                    <input type="tel" id="askQuestionModal-phone" class="askQuestionModal__phone"
+                        placeholder="Phone Number">
                     <div class="askQuestionModal__textarea">
-                        <textarea name="askQuestionModal-textarea" id="askQuestionModal-textarea" cols="30" rows="10" placeholder="Your message..."></textarea>
+                        <textarea name="askQuestionModal-textarea" id="askQuestionModal-textarea" cols="30" rows="10"
+                            placeholder="Your message..."></textarea>
                     </div>
                     <div class="askQuestionModal__form-btn">
                         <button>Send Message</button>
@@ -558,9 +827,11 @@
         <div class="deliveryModal__content">
             <span class="deliveryModal-close">&times;</span>
             <h2 class="deliveryModal__title">Shipping info</h2>
-            <p class="deliveryModal__text"><strong>Return Policy:</strong> We will gladly accept returns for any reason within 30 days of receipt of delivery.</p>
+            <p class="deliveryModal__text"><strong>Return Policy:</strong> We will gladly accept returns for any reason
+                within 30 days of receipt of delivery.</p>
             <p class="deliveryModal__text"><strong>Availability:</strong> Ships anywhere in the United States</p>
-            <p class="deliveryModal__text"><strong>Processing Time:</strong> Allow 3-4 business days processing time for your order to ship.</p>
+            <p class="deliveryModal__text"><strong>Processing Time:</strong> Allow 3-4 business days processing time for
+                your order to ship.</p>
         </div>
     </div>
 
@@ -591,10 +862,10 @@
 
     <div id="imageModal" class="imageModal">
         <div class="imageModal__content">
-          <span class="imageModal-close">&times;</span>
-          <img src="" class="modal-image" alt="Modal Image">
+            <span class="imageModal-close">&times;</span>
+            <img src="" class="modal-image" alt="Modal Image">
         </div>
-      </div>
+    </div>
 
     <script src="assets/js/product-detail.js"></script>
     <script src="assets/js/main.js"></script>

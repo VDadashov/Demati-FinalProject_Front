@@ -12,6 +12,13 @@ sans-serif;
 $custom-blue-color:#41cde2;
 $custom-text-color:rgb(134, 134, 134);
 $custom-border:1px solid rgba(70, 68, 68, 0.2);
+$modal-background-color: rgba(0, 0, 0, 0.6);
+$modal-content-background-color: #fefefe;
+$modal-content-border-color: #888;
+$close-color: #aaa;
+$close-hover-color: black;
+$submit-button-background-color: #4CAF50;
+$submit-button-hover-background-color: #45a049;
 
 .container {
     max-width: 1415.200px !important;
@@ -50,7 +57,6 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
 }
 
 #product-detail-content {
-    margin-bottom: 80px;
 
     .container {
         .product-item {
@@ -108,6 +114,7 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
                 img {
                     width: 100%;
                     height: 100%;
+                    cursor: pointer;
                 }
 
                 &--addition {
@@ -156,7 +163,7 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
 
             &--review-star {
                 color: rgb(182, 173, 173);
-                font: normal 200 9.5px/16px $custom-font-family;
+                font: normal 200 11.5px/16px $custom-font-family;
             }
 
             &--review-count {
@@ -267,7 +274,7 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
                     display: grid;
                     place-content: center;
 
-                    &.active {
+                    &.active-size {
                         background-color: #000;
                         color: #fff;
                     }
@@ -592,9 +599,395 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
                     padding: 0 10px;
                     display: inline-block;
                 }
-                &__content{
+
+                &__content {
                     padding: 35px 25px 30px;
                     border: 1px solid #dedede;
+                }
+            }
+        }
+
+        .product-item-down {
+            margin: 80px 0 20px;
+
+            .product-tab-list {
+                &__ul {
+                    margin-bottom: 60px;
+                    display: flex;
+                    align-items: center;
+                    gap: 60px;
+                    justify-content: center;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: -10px;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #e8e8e8;
+                    }
+                }
+
+                &__li {
+                    position: relative;
+
+                    span {
+                        font: normal 400 20px/34px $custom-font-family;
+                        color: $custom-text-color;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    &.active-selected {
+                        span {
+                            color: #000;
+                        }
+
+                        &::before {
+                            content: '';
+                            width: 100%;
+                            height: 1px;
+                            background-color: $custom-blue-color;
+                            position: absolute;
+                            bottom: -10px;
+                        }
+                    }
+                }
+
+                &__content {
+                    display: flex;
+                    justify-content: center;
+                    display: none;
+
+                    &>* {
+                        width: 1170px;
+                        animation: fadeDown 0.6s ease-in-out;
+                    }
+
+                    &.active-content {
+                        display: flex;
+                    }
+
+                    .description {
+                        p {
+                            margin-bottom: 20px;
+                            font: normal 400 15px/30px $custom-font-family;
+                            color: $custom-text-color;
+                        }
+
+                        &__row {
+                            display: flex;
+                            gap: 30px;
+                        }
+
+                        &__col {
+                            font: normal 400 15px/30px $custom-font-family;
+                            color: $custom-text-color;
+
+                            &.active-col {
+                                margin-right: 80px;
+                            }
+
+                            h6 {
+                                font: normal 600 16px/19.2px $custom-font-family;
+                                color: #000;
+                                margin-top: 16px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+
+                    .review {
+                        h2 {
+                            margin-bottom: 12px;
+                            font: normal 300 30px/36px $custom-font-family;
+                        }
+
+                        &__write {
+                            margin-bottom: 30px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        &__point {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            span {
+                                i {
+                                    font-size: 13.5px;
+                                    font-weight: 300px;
+                                    color: rgb(182, 173, 173);
+                                }
+                            }
+
+                            &--text {
+                                margin-top: 3px;
+                                margin-left: 5px;
+                                color: $custom-text-color;
+                                font: normal 400 15px/20px $custom-font-family;
+                            }
+                        }
+
+                        &--btn {
+                            button {
+                                width: 223.73px;
+                                height: 44.6px;
+                                text-align: center;
+                                font: normal 500 12px/43px $custom-font-family;
+                                border: 1px solid #000;
+                                letter-spacing: 2px;
+                                text-transform: uppercase;
+                                background-color: #fff;
+                                position: relative;
+
+                                &:before {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 100%;
+                                    width: 0%;
+                                    content: "";
+                                    transition: all .45s ease;
+                                    background-color: #41cde2;
+                                }
+
+                                span {
+                                    position: inherit;
+                                    z-index: 10;
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+                                    color: #fff;
+                                    border: #41CDE2;
+
+                                    &:before {
+                                        width: 100%;
+                                        transition: all .45s ease;
+                                    }
+                                }
+                            }
+                        }
+
+                        &__comment {
+                            padding: 30px 40px;
+                            margin: 0 0 15px;
+                            position: relative;
+                            background: #fff;
+                            border: 1px solid rgba(0, 0, 0, .05);
+
+                            &--raiting {
+                                display: flex;
+                                flex-direction: column;
+
+                                &__content {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 5px;
+                                }
+
+                                &--star {
+                                    i {
+                                        font-size: 11px;
+                                        font-weight: 300px;
+                                        color: rgb(182, 173, 173);
+                                        margin-right: 5px;
+                                        min-height: unset;
+                                        min-width: unset;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                &__writer {
+                                    font: normal 400 13px/22.1px $custom-font-family;
+                                    color: #aeaeae;
+                                    margin-left: 4px;
+                                    margin-top: 4px;                                
+                                }
+
+                                &__title{
+                                    margin: 7px 0 10px 0;
+                                    font: normal 500 18px/21px $custom-font-family;
+                                }
+                                &__description{
+                                    font: normal 400 15px/20px $custom-font-family;
+                                    color: $custom-text-color;
+                                }
+                            }
+
+                            &--report{
+                                font: normal 400 13px/16px $custom-font-family;
+                                color: rgb(174, 174, 174);
+                                text-decoration: underline;
+                                position: absolute;
+                                top: 30px;
+                                right: 40px;
+
+                                &:hover{
+                                    color: #41CDE2;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        &__write-content{
+                            margin: 50px 0;
+                            padding: 50px 0;
+                            border-top: 1px solid #ECECEC;
+                            flex-direction: column;
+                            display: none;
+
+                            &.active{
+                                display: flex;
+                            }
+
+                            h3{
+                                font: normal 300 25px/24px $custom-font-family;
+                                margin-bottom: 25px;
+                            }
+
+                            &__form-group{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                &__item{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 8px;
+                                    margin-bottom: 20px;
+
+                                    label{
+                                        font: normal 400 15px/20px $custom-font-family;
+                                    }
+                                    input{
+                                        width: 570px;
+                                        height: 60px;
+                                        padding: 14px 20px;
+                                        font: normal 400 15px/25.5px $custom-font-family;
+                                        border: $custom-border;
+                                        outline: none;
+
+                                        &::placeholder{
+                                            color: #aaa;
+                                        }
+                                    }
+                                }
+                            }
+                            &__choose-raiting{
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                margin: 10px 0 18px;
+
+                                &__title{
+                                    margin-right: 5px;
+                                    font: normal 400 15px/20px $custom-font-family;
+                                }
+                                span{
+                                    &:hover{
+                                        cursor: pointer;
+                                        
+                                    }
+                                    i{
+                                        font-size: 13px;
+                                        color: rgb(225, 225, 225);
+                                    }
+                                }
+                            }
+                            &__title{
+                                display: flex;
+                                flex-direction: column;
+                                margin-bottom: 15px;
+
+                                label{
+                                    margin-bottom: 8px;
+                                    font: normal 400 15px/20px $custom-font-family;
+                                }
+                                input{
+                                    font: normal 400 15px/25.5px $custom-font-family;
+                                    padding: 14px 20px;
+                                    height: 60px;
+                                    border: $custom-border;
+                                    outline: none;
+                                    
+                                    &::placeholder{
+                                        color: #aaa;
+                                    }
+                                }
+
+                            }
+                            &__description{
+                                margin-bottom: 20px;
+                                display: flex;
+                                flex-direction: column;
+
+                                label{
+                                    margin-bottom: 8px;
+                                    font: normal 400 15px/20px $custom-font-family;
+                                }
+
+                                textarea{
+                                    font: normal 400 15px/25.5px $custom-font-family;
+                                    padding: 14px 20px;
+                                    border: $custom-border;
+                                    outline: none;
+
+                                    &::placeholder{
+                                        color: #aaa;
+                                    }
+                                }
+                            }
+                            &--btn{
+                                align-self: center;
+                                button{
+                                    width: 209px;
+                                    height: 60px;
+                                    text-align: center;
+                                    background-color: #fff;
+                                    color: #000;
+                                    border: 2px solid #000;
+                                    font: normal 500 12px/18px $custom-font-family;
+                                    letter-spacing: 1.2px;
+                                    text-transform: uppercase;
+
+                                    &:hover{
+                                        background-color: $custom-blue-color;
+                                        color: #fff;
+                                        border: $custom-blue-color;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .shipping{
+                        p{
+                            margin-bottom: 20px;
+                            font: normal 400 15px/30px $custom-font-family;
+                            color: $custom-text-color;
+                        }
+                    }
+
+                    .return{
+                        line-height: 2em;
+                        font: normal 400 15px/30px $custom-font-family;
+                        color: $custom-text-color;
+
+                        p{
+                            margin-bottom: 20px;
+                        }
+                        ul{
+                            padding-left: 40px;
+                        }
+                    }
                 }
             }
         }
@@ -610,7 +1003,7 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 
     &__content {
         background-color: #fefefe;
@@ -658,7 +1051,7 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 
     &__content {
         background-color: #fefefe;
@@ -788,7 +1181,7 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 
     &__content {
         background-color: #fefefe;
@@ -857,7 +1250,7 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 
     &__content {
         background-color: #fefefe;
@@ -969,7 +1362,7 @@ $custom-border:1px solid rgba(70, 68, 68, 0.2);
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 
     &__content {
         background-color: #fefefe;

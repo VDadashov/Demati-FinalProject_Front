@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="assets/scss/main.css">
-        <link rel="stylesheet" href="assets/scss/contact-us/contact-us.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <link rel="stylesheet" href="assets/scss/contact-us/contact-us.css">
     <title>Contact Us</title>
 </head>
+
 <body>
     <div id="header-topbar">
         <div class="container">
@@ -111,7 +113,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="content-search-toggle"></div>
-                    <div class="header-account">
+                    <div id="header-accountBtn" class="header-account">
                         <i class="fa-regular fa-user"></i>
                     </div>
                     <div class="wishlist">
@@ -130,7 +132,10 @@
     <main>
         <section id="contact-us-map">
             <div class="contact-us-map-content">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d78362.68680510519!2d-84.42871582840796!3d33.77753337563048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2saz!4v1688732229545!5m2!1sen!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d78362.68680510519!2d-84.42871582840796!3d33.77753337563048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2saz!4v1688732229545!5m2!1sen!2saz"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <section id="contact-us-main">
@@ -155,7 +160,8 @@
                             </div>
                             <div class="get-in-touch__form__text-area">
                                 <label for="message">Message</label>
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..."></textarea>
+                                <textarea name="message" id="message" cols="30" rows="10"
+                                    placeholder="Your message..."></textarea>
                             </div>
                             <div class="get-in-touch__form__button">
                                 <button>Send Message</button>
@@ -374,6 +380,40 @@
         </div>
     </footer>
 
+    <div id="loginModal" class="loginModal">
+        <div class="loginModal-content">
+            <span id="loginClose">&times;</span>
+            <h3>Sign in</h3>
+            <div class="login-content">
+                <form action="#">
+                    <div class="login-info">
+                        <input type="email" placeholder="Email*" required="required">
+                        <div class="password__content">
+                            <input type="password" placeholder="Password*" id="login-password" required="required">
+                            <span id="passwordEye"><i class="fa-regular fa-eye"></i></span>
+                        </div>
+                        <a href="#" id="resetBtn">Lost your password ?</a>
+                        <button id="modal-signIn">Sign in</button>
+                        <a href="./register.html" id="register-account"><span>Create Your Account</span></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="resetPassword" class="resetPassword">
+        <div class="resetPassword-content">
+            <h3>Sign in</h3>
+            <div class="resetPassword-content__info">
+                <h2>Reset your password</h2>
+                <p>We will send you an email to reset your password.</p>
+                <input type="email" placeholder="Email*">
+                <button>Submit</button>
+                <a href="#" id="resetClose">Cancel</a>
+            </div>
+        </div>
+    </div>
+
     <div id="loading-screen">
         <div class="loader"></div>
         <p>Loading...</p>
@@ -381,4 +421,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

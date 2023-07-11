@@ -14,6 +14,23 @@
     background-position: 1000px 0;
   }
 }
+@keyframes high-animation {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes scale-animation {
   0% {
     transform: scale(1);
@@ -528,7 +545,7 @@ header .container #header-content .header-page-link .header-cart i {
 }
 #categories .categories-content .categories-item {
   height: 76.5px;
-  margin: 0 30px;
+  margin: 0 35px;
   position: relative;
 }
 #categories .categories-content .categories-item__title {
@@ -598,6 +615,16 @@ header .container #header-content .header-page-link .header-cart i {
   font: normal 300 30px/30px "Outfit", sans-serif;
   color: rgb(134, 134, 134);
 }
+#weekly-selection .container #weekly-selection-content .tab-list__li::before {
+  content: "";
+  width: 0%;
+  left: 0;
+  height: 0.5px;
+  background-color: rgb(46, 45, 45);
+  position: absolute;
+  bottom: -10px;
+  transition: all 0.4s ease;
+}
 #weekly-selection .container #weekly-selection-content .tab-list__li:hover {
   cursor: pointer;
 }
@@ -605,18 +632,14 @@ header .container #header-content .header-page-link .header-cart i {
   color: #000;
 }
 #weekly-selection .container #weekly-selection-content .tab-list__li.active-selected::before {
-  content: "";
   width: 100%;
-  height: 0.5px;
-  background-color: rgb(46, 45, 45);
-  position: absolute;
-  bottom: -10px;
+  transition: all 0.4s ease;
 }
 #weekly-selection .container #weekly-selection-content .tab-list__content {
   display: none;
 }
 #weekly-selection .container #weekly-selection-content .tab-list__content > * {
-  animation: fadeDown 0.8s ease-in-out;
+  animation: fadeDown 0.6s ease-in-out;
 }
 #weekly-selection .container #weekly-selection-content .tab-list__content.active-content {
   display: block;
@@ -1595,4 +1618,745 @@ footer .container .footer-bottom__part-1 {
   width: 50px;
   height: 50px;
   animation: spin 1.5s linear infinite;
+}
+
+.search-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.search-modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 100px 0 50px 0;
+  text-align: center;
+  border: 1px solid #888;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: fadeDown 0.3s ease-in-out;
+}
+.search-modal__main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 920px;
+}
+.search-modal__input {
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+}
+.search-modal__input input {
+  width: 908px;
+  height: 49.2px;
+  border: none;
+  outline: none;
+  font: normal 400 22px/48px "Outfit", sans-serif;
+}
+.search-modal__categories {
+  padding: 35px 0px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 920px;
+}
+.search-modal__categories__title {
+  font: normal 400 15px/25.5px "Outfit", sans-serif;
+}
+.search-modal__categories__list-category {
+  display: flex;
+  white-space: nowrap;
+  overflow: auto;
+  padding: 10px 0;
+}
+.search-modal__categories__list-category li {
+  margin: 5px 0 5px 10px;
+}
+.search-modal__categories__list-category li a {
+  display: inline-block;
+  line-height: 28px;
+  border: 1px solid #e2e2e2;
+  min-width: 80px;
+  padding: 0 15px;
+  text-align: center;
+  color: #868686;
+  text-decoration: none;
+  font: normal 400 15px/28px "Outfit", sans-serif;
+}
+.search-modal__categories__list-category li a:hover {
+  border: 1px solid #000;
+}
+.search-modal #searchClose {
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.search-modal #searchClose:hover, .search-modal #searchClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.productModal {
+  display: none;
+  position: fixed;
+  z-index: 991;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.productModal-content {
+  background-color: #fefefe;
+  margin: 4% auto;
+  text-align: center;
+  border: 1px solid #888;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: fadeDown 0.8s ease-in-out;
+}
+.productModal .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.productModal .slick-track {
+  width: 2250px !important;
+}
+.productModal .slick-dots {
+  display: none !important;
+}
+.productModal .slick-prev,
+.productModal .slick-next {
+  color: #000;
+  border: none;
+  border-radius: 5px;
+}
+.productModal .slick-prev i,
+.productModal .slick-next i {
+  font-size: 18px;
+  opacity: 0.8;
+}
+.productModal .slick-prev i:hover,
+.productModal .slick-next i:hover {
+  color: #41cde2;
+}
+.productModal .slick-prev {
+  z-index: 999;
+  left: 4px;
+  margin-right: 10px;
+}
+.productModal .slick-prev:hover::before {
+  color: #000;
+}
+.productModal .slick-prev::before {
+  color: #aea9a9;
+}
+.productModal .slick-next {
+  right: 4px;
+}
+.productModal .slick-next:hover::before {
+  color: #000;
+}
+.productModal .slick-next::before {
+  color: #aea9a9;
+}
+.productModal__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productModal__imageThumbnail {
+  width: 450px;
+  position: relative;
+}
+.productModal__image {
+  width: 450px;
+}
+.productModal__image img {
+  width: 450px;
+}
+.productModal__text {
+  max-height: 400px;
+  width: 395px;
+  padding-right: 10px;
+  padding-left: 8px;
+  margin-right: 20px;
+  text-align: start;
+  overflow-y: auto;
+}
+.productModal__text::-webkit-scrollbar {
+  width: 2px;
+}
+.productModal__text::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+.productModal__text::-webkit-scrollbar-track {
+  background-color: #e3dcdc;
+}
+.productModal__raiting {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+.productModal--raiting-star {
+  color: rgb(182, 173, 173);
+  font: normal 200 11px/16px "Outfit", sans-serif;
+}
+.productModal--raiting-count {
+  margin-left: 3px;
+  color: #868686;
+  font-size: 13px;
+}
+.productModal__title {
+  margin-bottom: 15px;
+  text-align: start;
+}
+.productModal__title h2 {
+  font: normal 300 20px/36px "Outfit", sans-serif;
+}
+.productModal__price {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.productModal--old-price {
+  font: normal 400 18px/14.85px "Outfit", sans-serif;
+  -webkit-text-decoration: line-through rgba(0, 0, 0, 0.6);
+          text-decoration: line-through rgba(0, 0, 0, 0.6);
+  opacity: 0.5;
+}
+.productModal--new-price {
+  font: normal 400 20.5px/16px "Outfit", sans-serif;
+  color: red;
+}
+.productModal__vendor {
+  font: normal 400 15px/25.5px "Outfit", sans-serif;
+  padding-bottom: 25px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid rgba(70, 68, 68, 0.2);
+  text-align: start;
+}
+.productModal__vendor span {
+  color: #41cde2;
+  cursor: pointer;
+  position: relative;
+}
+.productModal__vendor span:hover::before {
+  width: 0%;
+  transition: all 0.4s;
+}
+.productModal__vendor span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 0.5px;
+  background-color: #41CDE2;
+  transition: all 0.4s;
+}
+.productModal__info {
+  text-align: start;
+  font: normal 400 15px/25.5px "Outfit", sans-serif;
+  color: rgb(134, 134, 134);
+  margin-bottom: 15px;
+}
+.productModal__color {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.productModal__color__title {
+  text-align: start;
+  text-transform: uppercase;
+  margin-right: 6px;
+  font: normal 400 12px/20.4px "Outfit", sans-serif;
+  letter-spacing: 1.5px;
+}
+.productModal__color__value {
+  text-transform: uppercase;
+  margin-right: 9px;
+  font: normal 500 12px/20.4px "Outfit", sans-serif;
+  letter-spacing: 1.5px;
+}
+.productModal__color__content {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+.productModal__color__box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.productModal__color__box:hover {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.productModal__color__box.active-color {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.productModal__color--box {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.productModal__color--box span {
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  display: none;
+  position: relative;
+}
+.productModal__color--box span span {
+  text-align: center;
+  display: inline;
+  width: 60px;
+  padding: 5px 5px;
+  font: normal 400 13px/13px "Outfit", sans-serif;
+  color: white;
+  top: -35px;
+  text-transform: capitalize;
+}
+.productModal__color--box span i {
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  font-size: 16px;
+}
+.productModal__size {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.productModal__size__title {
+  text-transform: uppercase;
+  margin-right: 6px;
+  font: normal 400 12px/20.4px "Outfit", sans-serif;
+}
+.productModal__size__value {
+  margin-right: 9px;
+  font: normal 500 13px/18px "Outfit", sans-serif;
+}
+.productModal__size__content {
+  margin-top: 10px;
+  display: inherit;
+}
+.productModal__size__box {
+  width: 34.6px;
+  height: 34.6px;
+  border: 1px solid rgba(70, 68, 68, 0.2);
+  display: grid;
+  place-content: center;
+  margin-right: 8px;
+  font-size: 14px;
+}
+.productModal__size__box.active-size {
+  background-color: #000;
+  color: #fff;
+}
+.productModal__size__box:hover {
+  cursor: pointer;
+}
+.productModal__stock {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.productModal__stock i {
+  color: #108043;
+}
+.productModal__stock span {
+  font: normal 400 15px/25.5px "Outfit", sans-serif;
+}
+.productModal #productModalClose {
+  width: 36px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  color: #aaa;
+  float: right;
+  font-size: 27px;
+  font-weight: 300;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.productModal #productModalClose:hover, .productModal #productModalClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.productModal__add-to-card {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.productModal__add-to-card__btn {
+  margin-left: 10px;
+  width: 235.8px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  background-color: #000;
+  color: #fff;
+}
+.productModal__add-to-card__btn:hover {
+  background-color: #41cde2;
+  color: #fff;
+  cursor: pointer;
+}
+.productModal__count {
+  border: 1px solid rgba(70, 68, 68, 0.2);
+  width: 126.6px;
+  display: flex;
+}
+.productModal__count button {
+  width: 38px;
+  height: 48px;
+  border: none;
+  background-color: white;
+}
+.productModal__count button i {
+  font-size: 14px;
+  color: rgb(213, 213, 213);
+}
+.productModal__count button:hover {
+  cursor: pointer;
+}
+.productModal__count button:hover i {
+  color: #000;
+}
+.productModal__count input {
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 49px;
+  height: 48px;
+  font: normal 500 18px/30.6px "Outfit", sans-serif;
+}
+
+.loginModal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.loginModal-content {
+  background-color: #fefefe;
+  margin: 8.15% auto;
+  padding: 40px 30px 30px;
+  text-align: center;
+  border: 1px solid #888;
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.loginModal-content h3 {
+  display: inline-block;
+  font: normal 300 20px/24px "Outfit", sans-serif;
+  padding: 0 30px 10px;
+  background: white;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translate(-50%, 50%);
+}
+.loginModal-content h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% + 10px);
+  left: -5px;
+  height: 1px;
+  background: #41cde2;
+}
+.loginModal-content .login-content {
+  border: 1px solid #e5e5e5;
+  padding: 45px 30px 30px;
+  text-align: center;
+}
+.loginModal-content .login-content .login-info {
+  display: flex;
+  flex-direction: column;
+}
+.loginModal-content .login-content .login-info input {
+  margin-bottom: 16px;
+  width: 388.4px;
+  height: 50px;
+  font: normal 400 15px/50px "Outfit", sans-serif;
+  padding: 0 20px;
+  border: 1px solid #e5e5e5;
+  outline: none;
+}
+.loginModal-content .login-content .login-info .password__content {
+  position: relative;
+}
+.loginModal-content .login-content .login-info .password__content #passwordEye {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  opacity: 0.6;
+}
+.loginModal-content .login-content .login-info .password__content #passwordEye:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.loginModal-content .login-content .login-info .password__content #passwordEye:hover::before {
+  opacity: 0.6;
+}
+.loginModal-content .login-content .login-info .password__content #passwordEye::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 1px;
+  height: 100%;
+  background-color: #aba5a5;
+}
+.loginModal-content .login-content .login-info #resetBtn {
+  margin: 10px 0 20px;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: start;
+  color: #000;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font: normal 400 15px/25.5px "Outfit", sans-serif;
+}
+.loginModal-content .login-content .login-info #resetBtn:before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 0.6px;
+  background: black;
+  transition: all 0.3s ease;
+}
+.loginModal-content .login-content .login-info #resetBtn:hover {
+  color: #41cde2;
+}
+.loginModal-content .login-content .login-info #resetBtn:hover:before {
+  width: 0%;
+  background-color: #41cde2;
+  transition: all 0.3s ease;
+}
+.loginModal-content .login-content .login-info button {
+  height: 50px;
+  font: normal 500 12px/50px "Outfit", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: #41cde2;
+  background-color: #41cde2;
+  color: #fff;
+}
+.loginModal-content .login-content .login-info button:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+.loginModal-content .login-content .login-info #register-account {
+  height: 50px;
+  margin-top: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: rgb(65, 205, 226);
+  text-decoration: none;
+  font: normal 500 12px/18px "Outfit", sans-serif;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.loginModal-content .login-content .login-info #register-account span {
+  position: relative;
+}
+.loginModal-content .login-content .login-info #register-account span:hover {
+  color: #000;
+}
+.loginModal-content .login-content .login-info #register-account span:hover::before {
+  width: 0%;
+  transition: all 0.3s ease;
+  background-color: #000;
+}
+.loginModal-content .login-content .login-info #register-account span:before {
+  content: "";
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #41cde2;
+  transition: all 0.3s ease;
+}
+.loginModal #loginClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.loginModal #loginClose:hover, .loginModal #loginClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.resetPassword {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.resetPassword-content {
+  background-color: #fefefe;
+  margin: 8.15% auto;
+  padding: 40px 30px 30px;
+  text-align: center;
+  border: 1px solid #888;
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.resetPassword-content h3 {
+  display: inline-block;
+  font: normal 300 20px/24px "Outfit", sans-serif;
+  padding: 0 30px 10px;
+  background: white;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translate(-50%, 50%);
+}
+.resetPassword-content h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% + 10px);
+  left: -5px;
+  height: 1px;
+  background: #41cde2;
+}
+.resetPassword-content__info {
+  border: 1px solid #e5e5e5;
+  padding: 45px 30px 30px;
+  text-align: center;
+}
+.resetPassword-content__info h2 {
+  margin: 0 0 15px;
+  padding: 0;
+  color: #000;
+  font: normal 500 19px "Outfit", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+.resetPassword-content__info p {
+  position: relative;
+  margin: 0 0 30px;
+  padding: 0 0 20px;
+  font: italic 400 15px/25.5px "Outfit", sans-serif;
+  text-align: center;
+}
+.resetPassword-content__info p::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  pointer-events: none;
+  display: block;
+  width: 100px;
+  margin-left: -50px;
+  border-bottom: 1px solid black;
+}
+.resetPassword-content__info input {
+  font: normal 400 15px/50px "Outfit", sans-serif;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  border: 1px solid #e5e5e5;
+  outline: none;
+}
+.resetPassword-content__info button {
+  margin-top: 16px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border: #41cde2;
+  background-color: #41cde2;
+  font: normal 500 12px/50px "Outfit", sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.resetPassword-content__info a {
+  margin-top: 20px;
+  color: #000;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font: normal 400 15px/25.5px "Outfit", sans-serif;
+}
+.resetPassword-content__info a:hover {
+  color: #41cde2;
+}
+.resetPassword-content__info a:hover::before {
+  width: 0%;
+  transition: all 0.3s ease;
+}
+.resetPassword-content__info a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: black;
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=main.css.map */

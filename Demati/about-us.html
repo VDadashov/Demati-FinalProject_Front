@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css" />
     <link rel="stylesheet" href="assets/scss/main.css">
     <link rel="stylesheet" href="assets/scss/about-us/about-us.css">
     <title>About Us</title>
@@ -115,7 +115,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="content-search-toggle"></div>
-                    <div class="header-account">
+                    <div id="header-accountBtn" class="header-account">
                         <i class="fa-regular fa-user"></i>
                     </div>
                     <div class="wishlist">
@@ -281,7 +281,7 @@
                     </div>
                 </div>
             </div>
-            </section>
+        </section>
     </main>
 
     <section style="position: static;" id="popular-brands">
@@ -469,6 +469,40 @@
         </div>
     </footer>
 
+    <div id="loginModal" class="loginModal">
+        <div class="loginModal-content">
+            <span id="loginClose">&times;</span>
+            <h3>Sign in</h3>
+            <div class="login-content">
+                <form action="#">
+                    <div class="login-info">
+                        <input type="email" placeholder="Email*" required="required">
+                        <div class="password__content">
+                            <input type="password" placeholder="Password*" id="login-password" required="required">
+                            <span id="passwordEye"><i class="fa-regular fa-eye"></i></span>
+                        </div>
+                        <a href="#" id="resetBtn">Lost your password ?</a>
+                        <button id="modal-signIn">Sign in</button>
+                        <a href="./register.html" id="register-account"><span>Create Your Account</span></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="resetPassword" class="resetPassword">
+        <div class="resetPassword-content">
+            <h3>Sign in</h3>
+            <div class="resetPassword-content__info">
+                <h2>Reset your password</h2>
+                <p>We will send you an email to reset your password.</p>
+                <input type="email" placeholder="Email*">
+                <button>Submit</button>
+                <a href="#" id="resetClose">Cancel</a>
+            </div>
+        </div>
+    </div>
+
     <div id="loading-screen">
         <div class="loader"></div>
         <p>Loading...</p>
@@ -477,8 +511,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/about-us.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
