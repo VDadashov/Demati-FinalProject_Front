@@ -52,6 +52,16 @@
     transform: translateY(0px);
   }
 }
+@keyframes fadeDownScroll {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @keyframes fadeLeft {
   0% {
     opacity: 0;
@@ -105,7 +115,7 @@
   }
 }
 .container {
-  max-width: 1415.2px !important;
+  max-width: 1415.2px;
   margin: auto;
 }
 
@@ -149,6 +159,7 @@
   width: 486.4px;
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 #header-topbar .container .content-topbar__currency__have-flags {
   margin-right: 34px;
@@ -378,7 +389,7 @@ header .container #header-content .header-page-link .header-cart i {
 #first-section .img-slider {
   position: relative;
   width: 100%;
-  height: 550px;
+  height: 714.91px;
 }
 #first-section .img-slider .slide {
   z-index: 1;
@@ -386,6 +397,7 @@ header .container #header-content .header-page-link .header-cart i {
   width: 100%;
   -webkit-clip-path: circle(0% at 0 50%);
           clip-path: circle(0% at 0 50%);
+  height: 100%;
 }
 #first-section .img-slider .slide.active {
   -webkit-clip-path: circle(150% at 0 50%);
@@ -431,6 +443,7 @@ header .container #header-content .header-page-link .header-cart i {
   transition: all 0.45s;
 }
 #first-section .img-slider .slide img {
+  height: 100%;
   z-index: 1;
   width: 100%;
   border-radius: 5px;
@@ -438,7 +451,7 @@ header .container #header-content .header-page-link .header-cart i {
 #first-section .img-slider .navigation {
   z-index: 2;
   position: absolute;
-  bottom: -120px;
+  bottom: 8%;
   left: 44%;
   display: flex;
   transform: translateX(-6%);
@@ -460,8 +473,6 @@ header .container #header-content .header-page-link .header-cart i {
 }
 
 #collection {
-  position: relative;
-  top: 165px;
   display: flex;
 }
 #collection .left-collection {
@@ -566,8 +577,6 @@ header .container #header-content .header-page-link .header-cart i {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 165px;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid rgba(70, 68, 68, 0.2);
@@ -630,10 +639,6 @@ header .container #header-content .header-page-link .header-cart i {
   width: 100%;
 }
 
-#weekly-selection {
-  position: relative;
-  top: 165px;
-}
 #weekly-selection .container #weekly-selection-content {
   padding: 75px 0;
   display: flex;
@@ -692,6 +697,24 @@ header .container #header-content .header-page-link .header-cart i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#weekly-selection .container #weekly-selection-content .tab-list .product-card-content .slick-prev,
+#weekly-selection .container #weekly-selection-content .tab-list .product-card-content .slick-next {
+  color: #000;
+  border: none;
+  border-radius: 5px;
+}
+#weekly-selection .container #weekly-selection-content .tab-list .product-card-content .slick-prev i,
+#weekly-selection .container #weekly-selection-content .tab-list .product-card-content .slick-next i {
+  font-size: 18px;
+  opacity: 0.8;
+}
+#weekly-selection .container #weekly-selection-content .tab-list .product-card-content .slick-prev i:hover,
+#weekly-selection .container #weekly-selection-content .tab-list .product-card-content .slick-next i:hover {
+  color: #41cde2;
+}
+#weekly-selection .container #weekly-selection-content .tab-list .product-card-content .slick-prev {
+  margin-right: 10px;
 }
 #weekly-selection .container #weekly-selection-content .tab-list .product-card-content .product-card {
   display: flex;
@@ -946,11 +969,12 @@ header .container #header-content .header-page-link .header-cart i {
   color: #000;
   font-size: 16px;
 }
+#weekly-selection .container #weekly-selection-content .tab-list .product-card-content .product-card {
+  width: 360px;
+}
 
 #banner-collection {
   padding: 60px 0;
-  position: relative;
-  top: 165px;
 }
 #banner-collection .container .banner-collection-content {
   display: flex;
@@ -1003,8 +1027,6 @@ header .container #header-content .header-page-link .header-cart i {
 }
 
 #featured-products {
-  position: relative;
-  top: 165px;
   padding: 50px 0;
 }
 #featured-products .slick-prev,
@@ -1295,8 +1317,6 @@ header .container #header-content .header-page-link .header-cart i {
 
 #our-blog {
   padding: 70px 0;
-  position: relative;
-  top: 165px;
   border-bottom: 1px solid rgba(70, 68, 68, 0.2);
 }
 #our-blog .slick-prev,
@@ -1402,8 +1422,6 @@ header .container #header-content .header-page-link .header-cart i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 165px;
   border-bottom: 1px solid rgba(70, 68, 68, 0.2);
 }
 #popular-brands h2 {
@@ -1425,8 +1443,6 @@ header .container #header-content .header-page-link .header-cart i {
 
 #lookbook {
   padding: 60px 0 0 0;
-  position: relative;
-  top: 165px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1483,11 +1499,13 @@ header .container #header-content .header-page-link .header-cart i {
   border-bottom-color: #41cde2;
 }
 #lookbook .lookbook-instagram {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 85px;
 }
 #lookbook .lookbook-instagram .lookbook-card {
+  width: 100%;
   height: 251px;
   position: relative;
 }
@@ -1539,7 +1557,6 @@ header .container #header-content .header-page-link .header-cart i {
 
 footer {
   height: 336.8px;
-  margin-top: 165px;
 }
 footer .container .footer-content {
   display: flex;
@@ -2986,4 +3003,57 @@ footer .container .footer-bottom__part-1 {
   height: 1px;
   background: black;
   transition: all 0.3s ease;
+}
+
+#scrollButton {
+  position: fixed;
+  z-index: 991;
+  bottom: 70px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  animation: fadeDownScroll 0.5s forwards;
+  transition: background-color 0.3s;
+  display: none;
+}
+#scrollButton:before {
+  content: "";
+  top: 3px;
+  left: 3px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+#scrollButton:hover:after {
+  background-color: #41cde2;
+  color: #fff;
+}
+#scrollButton::after {
+  position: absolute;
+  content: "\f062";
+  font-family: "fontawesome";
+  text-align: center;
+  line-height: 28px;
+  font-size: 16px;
+  color: #000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: block;
+  z-index: -1;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
 }/*# sourceMappingURL=main.css.map */
